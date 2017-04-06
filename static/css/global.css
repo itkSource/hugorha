@@ -23,6 +23,10 @@ body {
 		float: right;
 		color: #888;
 	}
+		.link {
+			color: #888;
+		}
+
 	.nav {
 		background-color: #458df4;
 	}
@@ -53,7 +57,58 @@ body {
 		border: 1px solid #eee;
 		padding: 20px;
 	}
+	#TableOfContents a {
+		text-decoration: none;
+		color: #444;
+	}
+	#TableOfContents > ul > li > a {
+		display: block;
+		font-weight: bold;
+		padding: 5px;
+	}
+	#TableOfContents > ul > li > a:hover,
+	#TableOfContents > ul > li > a:focus {
+		background-color: #f5f5f5;
+	}
+
+	#TableOfContents > ul > li > ul {
+		border-left: 1px solid #eee;
+		padding: 0 0 0 5px;
+		margin: 5px 0 0 10px;
+		font-size: 0.9em;
+	}
+	#TableOfContents > ul > li > ul > li > a {
+		display: block;
+		padding: 5px;
+	}
+	#TableOfContents > ul > li > ul > li > a:hover,
+	#TableOfContents > ul > li > ul > li > a:focus {
+		background-color: #f5f5f5;
+	}
+
+	.contentwithside {
+		margin-right: 280px;
+	}
+
 
 h1 {
-	color: red
+	color: #458df4;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	font-size: 2em;
+}
+
+h2 {
+	color: #444;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	margin: 0 20px;
+	font-size: 1.6em;
+}
+
+p {
+	padding: 20px;
+}
+h2 ~ p {
+	padding-left: 40px;
 }
