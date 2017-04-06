@@ -1,5 +1,9 @@
 {{ partial "header" . }}
 <div class="max-width content">
-	<h1>Welcome to the landing page</h1>
+	{{range .Site.Pages}}
+        {{if eq .Title "Index"}}
+            {{ .Content }}
+        {{end}}
+    {{end}}
 </div>
 {{ partial "footer" . }}

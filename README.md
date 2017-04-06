@@ -9,7 +9,11 @@ cd themes
 git clone https://github.com/itkSource/hugorha.git
 ```
 
-Add `hugorha` has theme in your config.toml. 
+Add `hugorha` has theme in your config.toml.
+
+You must have a page with `title: "Index"` in there meta. It will be your home page.
+
+All your page of first level menu must have `menu: "main"` in there meta.
 
 ## Dev
 
