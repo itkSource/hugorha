@@ -33,7 +33,8 @@ body {
 			padding: 20px;
 		}
 		.nav-link:hover,
-		.nav-link:focus {
+		.nav-link:focus,
+		.nav-link.active {
 			background-color: #3e7bd2;
 		}
 
