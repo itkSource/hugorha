@@ -2,7 +2,12 @@
 <div class="max-width content">
 	{{range .Site.Pages}}
         {{if eq .Title "Index"}}
-            {{ .Content }}
+            <div class="sidenav">
+                {{ .TableOfContents }}
+            </div>
+            <div class="contentwithside">
+                {{ .Content }}
+            </div>
         {{end}}
     {{end}}
 </div>
