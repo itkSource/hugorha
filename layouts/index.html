@@ -1,0 +1,8 @@
+{{ partial "header" . }}
+{{ partial "menu" . }}
+
+{{ range .Site.Pages }}
+<a href="{{ .URL }}">{{ .LinkTitle }}</a>
+{{ end }}
+
+{{ partial "footer" . }}
