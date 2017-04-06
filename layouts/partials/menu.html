@@ -1,7 +1,35 @@
+{{ printf "%s" .Site.Menus}}
+
 <nav class="nav">
-	<div class="max-width">
-		{{ range .Site.Pages }}
-			<a class="nav-link" href="{{ .URL }}">{{ .LinkTitle }}</a>
-		{{ end }}
-	</div>
+    <div class="max-width">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus }}
+            {{ if .HasChildren }}
+
+            <li class="sub-menu{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+            <a href="javascript:;" class="nav-link">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+                <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
+            <ul class="sub">
+                {{ range .Children }}
+                <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{.URL}}"> {{ .Name }} </a> </li>
+                {{ end }}
+            </ul>
+            {{else}}
+            <li>
+                <a href="{{.URL}}" class="nav-link">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+                {{end}}
+            </li>
+            {{end}}
+            <li> <a href="http://www.itk.fr" target="blank" class="nav-link">Itk</a> </li>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
 </nav>

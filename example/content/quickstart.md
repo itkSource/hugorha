@@ -1,5 +1,6 @@
 ---
 title: "Quickstart"
+menu: "quickstart"
 ---
 
 # Quickstart
