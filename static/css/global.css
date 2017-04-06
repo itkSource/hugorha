@@ -38,10 +38,21 @@ body {
 			background-color: #3e7bd2;
 		}
 
+
+	
 .content {
+	position: relative;
 	box-sizing: border-box;
 	padding: 20px;
 }
+	#TableOfContents {
+		position: absolute;
+		top: 20px;
+		right: 0;
+		width: 200px;
+		border: 1px solid #eee;
+		padding: 20px;
+	}
 
 h1 {
 	color: red

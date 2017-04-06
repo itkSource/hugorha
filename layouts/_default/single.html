@@ -1,6 +1,10 @@
 {{ partial "header" . }}
 <div class="max-width content">
-	{{ .TableOfContents }}
-    {{ .Content }}
+	<div class="sidenav">
+		{{ .TableOfContents }}
+	</div>
+	<div class="contentwithside">
+	    {{ .Content }}
+	</div>
 </div>
 {{ partial "footer" . }}
