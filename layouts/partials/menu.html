@@ -1,10 +1,3 @@
-{{ range .Site.Menus.main.ByWeight }}
-<a class="list-group-item" href=#><b>{{ .Name }}</b></a>
-{{ if .HasChildren }}
-<div class="list-group">
-    {{ range .Children }}
-    <a class="list-group-item" href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
-</div>
-{{end}}
-{{end}}
+{{ range .Site.Pages }}
+<a href="{{ .URL }}">{{ .LinkTitle }}</a>
+{{ end }}
