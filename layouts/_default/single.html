@@ -1,10 +1,6 @@
 {{ partial "header" . }}
-{{ partial "menu" . }}
-
-{{ .TableOfContents }}
-
-<div class="row">
-                    {{ .Content }}
+<div class="max-width content">
+	{{ .TableOfContents }}
+    {{ .Content }}
 </div>
-
 {{ partial "footer" . }}

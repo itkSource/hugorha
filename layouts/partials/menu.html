@@ -1,3 +1,7 @@
-{{ range .Site.Pages }}
-<a href="{{ .URL }}">{{ .LinkTitle }}</a>
-{{ end }}
+<nav class="nav">
+	<div class="max-width">
+		{{ range .Site.Pages }}
+			<a class="nav-link" href="{{ .URL }}">{{ .LinkTitle }}</a>
+		{{ end }}
+	</div>
+</nav>
