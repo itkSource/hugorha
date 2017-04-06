@@ -1,5 +1,5 @@
 theme = "hugorha"
 themesdir = "../.."
-baseurl = "http://hugorha.com/"
+baseurl = "http://localhost:1313/"
 title = "Hugorha Example Site"
-menu= "main"
+PygmentsCodeFences = true
