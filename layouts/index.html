@@ -2,11 +2,11 @@
 <div class="max-width content">
 	{{range .Site.Pages}}
         {{if eq .Title .Site.Params.homePageTitle}}
-            <div class="sidenav">
-                {{ .TableOfContents }}
-            </div>
             <div class="contentwithside">
                 {{ .Content }}
+            </div><!--
+            --><div class="sidenav">
+                {{ .TableOfContents }}
             </div>
         {{end}}
     {{end}}
