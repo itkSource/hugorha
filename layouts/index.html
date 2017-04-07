@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 <div class="max-width content">
 	{{range .Site.Pages}}
-        {{if eq .Title "Index"}}
+        {{if eq .Title .Site.Params.homePageTitle}}
             <div class="sidenav">
                 {{ .TableOfContents }}
             </div>

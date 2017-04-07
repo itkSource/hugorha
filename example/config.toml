@@ -5,6 +5,8 @@ title = "Hugorha Example Site"
 PygmentsCodeFences = true
 
 [params]
+homePageTitle = "Hugorha"
+
     [params.header]
     links = [ [ "itk", "http://www.itk.fr" ], [ "ForkMe ImFamous", "http://gitlab.com/itk.fr" ] ]
 

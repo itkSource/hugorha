@@ -2,7 +2,7 @@
 	<div class="max-width">
 		{{ $currentPage := .}}
 	    {{ range .Site.Menus.main }}
-	        {{if eq .Name "Index"}}
+	        {{if eq .Name $currentPage.Site.Params.homePageTitle}}
 	        <a href="/" class="nav-link {{ if eq $currentPage.URL `/` }}active{{ end }}">
 	            <span>{{ .Name }}</span>
 	        </a>

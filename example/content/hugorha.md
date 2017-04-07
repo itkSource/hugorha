@@ -1,5 +1,5 @@
 ---
-title: "Index"
+title: "Hugorha"
 menu: "main"
 ---
 
