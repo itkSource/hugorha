@@ -18,6 +18,7 @@ body {
 		font-size: 1.4em;
 		text-decoration: none;
 		color: #444;
+		height: 50px;
 	}
 	.header-right {
 		float: right;

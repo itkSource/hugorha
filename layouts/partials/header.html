@@ -13,9 +13,11 @@
 <body>
 	<header class="header">
 		<div class="max-width">
-			<a class="logo" href="">Hugorha</a>
+			<img class="logo" src="/images/headerLogo.png">
 			<div class="header-right">
-    			<a href="http://www.itk.fr" target="blank" class="link">Itk</a>
+				{{ range .Site.Params.Header.links }}
+				<a href="{{ index . 1 }}" target="blank" class="link">{{ index . 0 }}</a>
+				{{ end }}
     		</div>
 		</div>
 	</header>
