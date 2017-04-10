@@ -229,6 +229,14 @@ blockquote {
 		padding-top: 10px;
 	}
 
+code {
+	background-color: #666;
+	color: #fefefe;
+}
+code:before, code:after {
+	content: "\""
+}
+
 .footer {
 	background: #d84394;
 	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
