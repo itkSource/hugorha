@@ -107,6 +107,13 @@ body {
 		box-sizing: border-box;
 		padding-right: 20px;
 	}
+		.contentwithside img {
+			max-width: 100%;
+		}
+		.contentwithside .highlight {
+			overflow: auto;
+			color: #fefefe;
+		}
 	.sidenav {
 		vertical-align: top;
 		display: inline-block;
