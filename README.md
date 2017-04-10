@@ -18,7 +18,9 @@ In your config you must have :
 ```toml
 [params]
 # The title of your homepage (to be rendered in /)
-homePageTitle = "Hugorha" 
+homePageTitle = "Hugorha"
+# The logo name (not url) with the extension (placed in /static/images)
+logoFileName = "headerLogo.svg"
 
     [params.header]
     # The links (label, src) rendered in top /right site

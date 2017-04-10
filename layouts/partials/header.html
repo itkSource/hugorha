@@ -8,16 +8,16 @@
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="/css/global.css" rel="stylesheet">
-    <title>Hugorha - {{ .Title }}</title>
+    <title>{{ .Site.Title }} - {{ .Title }}</title>
 </head>
 <body>
 	<header class="header">
 		<div class="max-width">
-			<img class="logo" src="/images/headerLogo.png">
+			<img class="logo" src="/images/{{ .Site.Params.logoFileName }}">
 			<div class="header-sitename">{{ .Site.Title }}</div>
 			<div class="header-right">
 				{{ range .Site.Params.Header.links }}
-				<a href="{{ index . 1 }}" target="blank" class="link">{{ index . 0 }}</a>
+				<a href="{{ index . 1 }}" target="blank" class="btn">{{ index . 0 }}</a>
 				{{ end }}
     		</div>
 		</div>

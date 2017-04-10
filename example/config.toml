@@ -1,11 +1,12 @@
 theme = "hugorha"
 themesdir = "../.."
 baseurl = "http://localhost:1313/"
-title = "Hugorha Example Site"
+title = "Lorhammer"
 PygmentsCodeFences = true
 
 [params]
-homePageTitle = "Hugorha"
+homePageTitle = "Lorhammer"
+logoFileName = "headerLogo.svg"
 
     [params.header]
     links = [ [ "itk", "http://www.itk.fr" ], [ "ForkMe ImFamous", "http://gitlab.com/itk.fr" ] ]
