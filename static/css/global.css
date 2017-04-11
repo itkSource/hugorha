@@ -173,6 +173,13 @@ body {
 						font-size: 0.9em;
 					}
 
+						/* FOURTH LEVEL */
+						#TableOfContents > ul > li > ul > li > ul > li > ul {
+							border-left: 1px solid #eee;
+							padding: 0 0 0 7px;
+							margin: 5px 0 10px 10px;
+						}
+
 
 
 h1 {
@@ -199,6 +206,14 @@ h3 {
 	padding: 10px 0;
 	margin: 20px 0;
 	font-size: 1.2em;
+}
+
+h4 {
+	color: #444;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	margin: 20px 0;
+	font-size: 1.1em;
 }
 
 p {
