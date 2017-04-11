@@ -1,14 +1,5 @@
-{{ partial "header" . }}
-<div class="max-width content">
-	{{range .Site.Pages}}
-        {{if eq .Title .Site.Params.homePageTitle}}
-            <div class="contentwithside">
-                {{ .Content }}
-            </div><!--
-            --><div class="sidenav">
-                {{ .TableOfContents }}
-            </div>
-        {{end}}
+{{range .Site.Pages}}
+    {{if eq .Title .Site.Params.homePageTitle}}
+        {{ .Render "single" }}
     {{end}}
-</div>
-{{ partial "footer" . }}
+{{end}}

@@ -3,7 +3,7 @@
 		{{ $currentPage := .}}
 	    {{ range .Site.Menus.main }}
 	        {{if eq .Name $currentPage.Site.Params.homePageTitle}}
-	        <a href="/" class="nav-link {{ if eq $currentPage.URL `/` }}active{{ end }}">
+	        <a href="/" class="nav-link {{ if eq $currentPage.URL $currentPage.Site.Params.homePageUrl }}active{{ end }}">
 	            <span>{{ .Name }}</span>
 	        </a>
 	        {{else}}

@@ -6,10 +6,16 @@ PygmentsCodeFences = true
 
 [params]
 homePageTitle = "Lorhammer"
+homePageUrl = "/index/"
 logoFileName = "headerLogo.svg"
 
     [params.header]
-    links = [ [ "itk", "http://www.itk.fr" ], [ "ForkMe ImFamous", "http://gitlab.com/itk.fr" ] ]
+    links = [
+        '<a href="https://gitlab.itkweb.fr/platform-iot/lorhammer/commits/master" target="blank"><img alt="build status" src="https://gitlab.itkweb.fr/platform-iot/lorhammer/badges/master/build.svg"></a>',
+        '<a href="https://gitlab.itkweb.fr/platform-iot/lorhammer/commits/master"><img alt="coverage report" src="https://gitlab.itkweb.fr/platform-iot/lorhammer/badges/master/coverage.svg" /></a>',
+		'<a href="http://www.itk.fr" target="blank" class="btn">itk</a>',
+		'<a href="http://gitlab.com/itk.fr" target="blank" class="btn">ForkMe ImFamous</a>'
+    ]
 
     [params.footer]
     copyrightHTML = "Copyright &#xA9; 1982 John Doe. All Rights Reserved."

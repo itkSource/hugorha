@@ -17,7 +17,7 @@
 			<div class="header-sitename">{{ .Site.Title }}</div>
 			<div class="header-right">
 				{{ range .Site.Params.Header.links }}
-				<a href="{{ index . 1 }}" target="blank" class="btn">{{ index . 0 }}</a>
+					{{ safeHTML . }}
 				{{ end }}
     		</div>
 		</div>
