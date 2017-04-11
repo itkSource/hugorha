@@ -230,10 +230,14 @@ blockquote {
 	}
 
 code {
-	background-color: #666;
+	background-color: #444;
+	padding: 1px 5px;
+	font-size: 0.9em;
 	color: #fefefe;
+	font-family: "Courier New";
 }
-code:before, code:after {
+code:before,
+code:after {
 	content: "\""
 }
 
