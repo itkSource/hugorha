@@ -39,6 +39,7 @@ body {
 		text-decoration: none;
 		color: #FFF;
 		text-shadow: 0 3px 0 #b22f84, 3px 0 0 #b22f84, 0 -3px 0 #b22f84, -3px 0 0 #b22f84, 2px 2px 0 #b22f84, -2px 2px 0 #b22f84, 2px -2px 0 #b22f84, -2px -2px 0 #b22f84;
+		margin-left: 20px;
 	}
 	.header-right {
 		float: right;
