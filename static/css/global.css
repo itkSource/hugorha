@@ -113,6 +113,8 @@ body {
 		.contentwithside .highlight {
 			overflow: auto;
 			color: #fefefe;
+			padding: 6px;
+			border-radius: 2px;
 		}
 	.sidenav {
 		vertical-align: top;
