@@ -1,6 +1,7 @@
 ---
 title: "Hugorha"
 menu: "main"
+subnav: "true"
 ---
 
 # Lorhammer

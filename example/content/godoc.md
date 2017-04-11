@@ -3,6 +3,7 @@ title: "GoDoc"
 menu: 
     main:
         weight: 4
+subnav: "true"
 ---
 
 # lorhammer

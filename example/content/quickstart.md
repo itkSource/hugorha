@@ -3,6 +3,7 @@ title: "Quickstart"
 menu: 
     main:
         weight: 2
+subnav: "true"
 ---
 
 # Quickstart

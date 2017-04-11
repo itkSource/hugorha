@@ -63,16 +63,12 @@ body {
 
 
 .nav {
-	background-color: #458df4;
-
 	background: #d84394;
 	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
 	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
 	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
-
 	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
-
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
@@ -94,24 +90,25 @@ body {
 
 
 	
-.content {
+.content-wrapper {
 	position: relative;
-	box-sizing: border-box;
-	padding: 20px 20px 150px 40px;
-	line-height: 1.4em;
-	color: #666;
 }
-	.contentwithside {
+	.content {
+		position: relative;
+		box-sizing: border-box;
+		padding: 20px 20px 150px 40px;
+		line-height: 1.4em;
+		color: #666;
+	}
+	.content-withside {
 		display: inline-block;
 		vertical-align: top;
-		width: calc(100% - 200px);
-		box-sizing: border-box;
-		padding-right: 20px;
+		width: calc(100% - 250px);
 	}
-		.contentwithside img {
+		.content-withside img {
 			max-width: 100%;
 		}
-		.contentwithside .highlight {
+		.content-withside .highlight {
 			overflow: auto;
 			color: #fefefe;
 			padding: 6px;
@@ -124,16 +121,16 @@ body {
 		position: sticky;
 		position: -webkit-sticky;
 		top: 80px;
-		width: 200px;
+		width: 250px;
 		line-height: 1rem;
 	}
 		#TableOfContents {
 			border: 1px solid #eee;
-			padding: 20px;
+			padding: 10px 20px 20px;
 			top: 80px;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			overflow: hidden;
+			font-size: 0.9em;
+			overflow: auto;
+			max-height: 80vh;
 		}
 		#TableOfContents ul {
 			list-style-type: none;
@@ -143,7 +140,9 @@ body {
 				text-decoration: none;
 				color: #444;
 				display: block;
-				padding: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
 			}
 			#TableOfContents a:hover,
 			#TableOfContents a:focus {
@@ -152,33 +151,32 @@ body {
 
 			/* FIRST LEVEL */
 			#TableOfContents > ul > li > a {
-				font-weight: bold;
 				color: #b22f84;
+				padding: 5px 0;
+			}
+			#TableOfContents > ul > li + li {
+				border-top: 1px solid #eee;
 			}
 				/* SECOND LEVEL */
 				#TableOfContents > ul > li > ul {
 					padding: 0 0 0 5px;
-					margin: 5px 0 0 10px;
 					font-size: 0.9em;
 				}
 				/* SECOND LEVEL */
 				#TableOfContents > ul > li > ul > li > a {
-					font-weight: bold;
 				}
 
 					/* THiRD LEVEL */
 					#TableOfContents > ul > li > ul > li > ul {
 						border-left: 1px solid #eee;
 						padding: 0 0 0 5px;
-						margin: 5px 0 10px 10px;
+						margin: 5px 0 10px 5px;
 						font-size: 0.9em;
 					}
 
 						/* FOURTH LEVEL */
 						#TableOfContents > ul > li > ul > li > ul > li > ul {
-							border-left: 1px solid #eee;
-							padding: 0 0 0 7px;
-							margin: 5px 0 10px 10px;
+							display: none;
 						}
 
 

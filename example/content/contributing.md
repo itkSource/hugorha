@@ -3,6 +3,7 @@ title: "Contributing"
 menu: 
     main:
         weight: 20
+subnav: "true"
 ---
 # Contributing
 

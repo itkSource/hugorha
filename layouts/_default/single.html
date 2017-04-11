@@ -1,10 +1,17 @@
 {{ partial "header" . }}
-<div class="max-width content">
-    <div class="contentwithside">
-        {{ .Content }}
-    </div><!--
-    --><div class="sidenav">
-        {{ .TableOfContents }}
-    </div>
+<div class="max-width content-wrapper">
+{{ .Title }}
+    {{ if eq .Submenu "true" }}
+	    <div class="content content-withside">
+	        {{ .Content }}
+	    </div><!--
+	    --><div class="sidenav">
+	        {{ .TableOfContents }}
+	    </div>
+	{{ else }}
+		<div class="content">
+	        {{ .Content }}
+	    </div>
+    {{ end }}
 </div>
 {{ partial "footer" . }}
