@@ -1,7 +1,6 @@
 {{ partial "header" . }}
 <div class="max-width content-wrapper">
-{{ .Title }}
-    {{ if eq .Submenu "true" }}
+    {{ if eq .Params.Subnav "true" }}
 	    <div class="content content-withside">
 	        {{ .Content }}
 	    </div><!--

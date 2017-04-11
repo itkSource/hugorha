@@ -1,7 +1,7 @@
 theme = "hugorha"
 themesdir = "../.."
 baseurl = "http://localhost:1313/"
-title = "Lorhammer"
+title = "Lorhammer2"
 PygmentsCodeFences = true
 
 [params]

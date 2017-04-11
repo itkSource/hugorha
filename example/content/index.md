@@ -3,7 +3,7 @@ title: "Lorhammer"
 menu: 
     main:
         weight: 1
-subnav: "true"
+subnav: "false"
 ---
 
 # Lorhammer

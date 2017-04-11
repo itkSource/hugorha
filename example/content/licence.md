@@ -3,7 +3,7 @@ title: "Licence"
 menu: 
     main:
         weight: 30
-subnav: "true"
+subnav: "false"
 ---
 Copyright 2017 ITK
 http://www.itk.fr
