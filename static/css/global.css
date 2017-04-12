@@ -111,10 +111,10 @@ body {
 		vertical-align: top;
 		width: calc(100% - 250px);
 	}
-		.content-withside img {
+		.content-withside img, .content img {
 			max-width: 100%;
 		}
-		.content-withside .highlight {
+		.content-withside .highlight, .content .highlight {
 			overflow: auto;
 			color: #fefefe;
 			padding: 6px;
