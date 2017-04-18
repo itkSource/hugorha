@@ -1,28 +1,27 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<base href="{{ .Site.BaseURL }}">
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="/css/global.css" rel="stylesheet">
+	<link href="{{ `css/global.css` | absURL }}" rel="stylesheet">
 	{{ range .Site.Params.favicons }}
-		{{ safeHTML . }}
+	{{ safeHTML . }}
 	{{ end }}
-    <title>{{ .Site.Title }} - {{ .Title }}</title>
+	<title>{{ .Site.Title }} - {{ .Title }}</title>
 </head>
 <body>
-	<header class="header">
-		<div class="max-width">
-			<img class="logo" src="/images/{{ .Site.Params.logoFileName }}">
-			<div class="header-sitename">{{ .Site.Title }}</div>
-			<div class="header-right">
-				{{ range .Site.Params.Header.links }}
-					{{ safeHTML . }}
-				{{ end }}
-    		</div>
+<header class="header">
+	<div class="max-width">
+		<img class="logo" src="{{ .Site.Params.logoFileName | absURL }}">
+		<div class="header-sitename">{{ .Site.Title }}</div>
+		<div class="header-right">
+			{{ range .Site.Params.Header.links }}
+			{{ safeHTML . }}
+			{{ end }}
 		</div>
-	</header>
-	{{ partial "menu" . }}
+	</div>
+</header>
+{{ partial "menu" . }}

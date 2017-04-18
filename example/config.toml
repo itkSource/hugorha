@@ -3,11 +3,11 @@ themesdir = "../.."
 baseurl = "http://localhost:1313/"
 title = "Lorhammer2"
 PygmentsCodeFences = true
+relativeURLs = true
 
 [params]
 homePageTitle = "Lorhammer"
-homePageUrl = "/index/"
-logoFileName = "headerLogo.svg"
+logoFileName = "images/headerLogo.svg"
 favicons = [
     '<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">',
     '<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">',

@@ -1,16 +1,18 @@
 <nav class="nav">
 	<div class="max-width">
-		{{ $currentPage := .}}
-	    {{ range .Site.Menus.main }}
-	        {{if eq .Name $currentPage.Site.Params.homePageTitle}}
-	        <a href="/" class="nav-link {{ if eq $currentPage.URL $currentPage.Site.Params.homePageUrl }}active{{ end }}">
-	            <span>{{ .Name }}</span>
-	        </a>
-	        {{else}}
-	        <a href="{{.URL}}" class="nav-link {{ if eq $currentPage.URL .URL }}active{{ end }}">
-	            <span>{{ .Name }}</span>
-	        </a>
-	        {{end}}
-	    {{end}}
-    </div>
+		{{ $currentPage := . }}
+		{{ $baseUrl := .Site.BaseURL }}
+
+		{{ range .Site.Menus.main }}
+		{{if eq .Name $currentPage.Site.Params.homePageTitle}}
+		<a href="{{ $baseUrl }}" class="nav-link {{ if eq $currentPage.Title $currentPage.Site.Params.homePageTitle }}active{{ end }}">
+			<span>{{ .Name }}</span>
+		</a>
+		{{else}}
+		<a href="{{ .URL | absURL }}" class="nav-link {{ if eq $currentPage.URL .URL }}active{{ end }}">
+			<span>{{ .Name }}</span>
+		</a>
+		{{end}}
+		{{end}}
+	</div>
 </nav>
