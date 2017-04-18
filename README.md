@@ -19,8 +19,8 @@ In your config you must have :
 [params]
 # The title of your homepage (to be rendered in /)
 homePageTitle = "Hugorha"
-# The logo name (not url) with the extension (placed in /static/images)
-logoFileName = "headerLogo.svg"
+# The logo name (not url) with the extension (placed in /static)
+logoFileName = "images/headerLogo.svg"
 # Favicons links
 favicons = [
     '<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">',
