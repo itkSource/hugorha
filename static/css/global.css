@@ -113,6 +113,8 @@ body {
 	}
 		.content-withside img, .content img {
 			max-width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 2px;
 		}
 		.content-withside .highlight, .content .highlight {
 			overflow: auto;
