@@ -85,13 +85,32 @@ body {
 		color: #fff;
 		padding: 20px;
 		font-weight: bold;
-		color:#FFF;
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
 	}
 	.nav-link:hover,
 	.nav-link:focus,
 	.nav-link.active {
 		background-color: rgba(0,0,0,0.2);
 	}
+    .nav .nav-link .sub-nav-link {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        list-style: none;
+        background-color: #680764;
+        padding: 10px;
+    }
+    .nav .nav-link .sub-nav-link li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .nav .nav-link:hover > .sub-nav-link {
+        display: block;
+    }
 
 
 	
