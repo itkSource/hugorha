@@ -22,7 +22,7 @@ relativeURLs = true
 
 [params]
 homePageTitle = "Index"
-logoFileName = "images/headerLogo.svg"
+logoFileName = "images/headerLogo.png"
 favicons = [
     '<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">',
     '<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">',
@@ -53,4 +53,11 @@ favicons = [
     copyrightHTML = "Copyright &#xA9; 2017 Itk. All Rights Reserved."
 
     [params.css]
+    specialFontName = "font/minspsw"
     bgColor = "#fff"
+    mainColor = "#60adea"
+
+    nameColorInverted = false
+    gradient = false
+    
+    defaultColor = "#b22f84"

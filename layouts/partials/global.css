@@ -3,14 +3,19 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 @font-face {
     font-family: 'special-font';
-    src: url('../font/minspsw.eot');
-    src: url('../font/minspsw.eot?#iefix') format('embedded-opentype'),
-         url('../font/minspsw.woff') format('woff'),
-         url('../font/minspsw.ttf') format('truetype'),
-         url('../font/minspsw.svg#minspsw') format('svg');
+    src: url('../{{ .Param "css.specialFontName" }}.woff') format('woff'),
+         url('../{{ .Param "css.specialFontName" }}.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
+
+{{if .Param "css.gradient"}}
+
+{{else}}
+
+{{end}}
+
 
 
 
@@ -38,8 +43,12 @@ body {
 		vertical-align: middle;
 		font-size: 3em;
 		text-decoration: none;
-		color: #FFF;
-		text-shadow: 0 3px 0 #b22f84, 3px 0 0 #b22f84, 0 -3px 0 #b22f84, -3px 0 0 #b22f84, 2px 2px 0 #b22f84, -2px 2px 0 #b22f84, 2px -2px 0 #b22f84, -2px -2px 0 #b22f84;
+		{{if .Param "css.nameColorInverted"}}
+			color: #FFF;
+			text-shadow: 0 3px 0 {{ .Param "css.mainColor" }}, 3px 0 0 {{ .Param "css.mainColor" }}, 0 -3px 0 {{ .Param "css.mainColor" }}, -3px 0 0 {{ .Param "css.mainColor" }}, 2px 2px 0 {{ .Param "css.mainColor" }}, -2px 2px 0 {{ .Param "css.mainColor" }}, 2px -2px 0 {{ .Param "css.mainColor" }}, -2px -2px 0 {{ .Param "css.mainColor" }};
+		{{else}}
+			color: {{ .Param "css.mainColor" }};
+		{{end}}
 		margin-left: 20px;
 	}
 	.header-right {
@@ -63,23 +72,29 @@ body {
 		}
 			.btn:hover,
 			.btn:focus {
-				border-color: #b22f84;
-				color: #b22f84;
+				border-color: {{ .Param "css.mainColor" }};
+				color: {{ .Param "css.mainColor" }};
 			}
 
 
 .nav-wrapper {
-	background: #d84394;
-	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
-	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
-	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+	{{if .Param "css.gradient"}}
+		background: {{ .Param "css.mainColor" }};
+		background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
+		background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+		background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+		background: {{ .Param "css.mainColor" }};
+	{{else}}
+		background: {{ .Param "css.mainColor" }};
+	{{end}}
+	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset, 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 	z-index: 10;
 }
+
 	.nav > li {
 		display: inline-block;
 	    list-style: none;
@@ -112,7 +127,7 @@ body {
 			overflow: hidden;
 			left: 0;
 			margin: 0;
-			background-color: #b22f84;
+			background-color: {{ .Param "css.mainColor" }};
 			display: none;
 		}
 		.nav > li:hover > .subnav {
@@ -203,7 +218,7 @@ body {
 
 			/* FIRST LEVEL */
 			#TableOfContents > ul > li > a {
-				color: #b22f84;
+				color: {{ .Param "css.mainColor" }};
 				padding: 5px 0;
 			}
 			#TableOfContents > ul > li + li {
@@ -239,7 +254,7 @@ body {
 
 h1 {
 	font-family: 'special-font';
-	color: #b22f84;
+	color: {{ .Param "css.mainColor" }};
 	border-bottom: 1px solid #eee;
 	padding: 10px 0;
 	font-size: 2em;
@@ -288,13 +303,13 @@ ul {
 
 .content a:link,
 .content a:visited {
-	color: #b22f84;
+	color: {{ .Param "css.mainColor" }};
 }
 
 blockquote {
 	border-radius: 2px;
-	border:1px solid #b22f84;
-	color: #b22f84;
+	border:1px solid {{ .Param "css.mainColor" }};
+	color: {{ .Param "css.mainColor" }};
 	padding: 20px;
 }
 	blockquote p {
@@ -326,13 +341,17 @@ table {
 	}
 
 .footer {
-	background: #d84394;
-	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
-	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+	{{if .Param "css.gradient"}}
+		background: {{ .Param "css.mainColor" }};
+		background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
+		background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+		background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+	{{else}}
+		background: {{ .Param "css.mainColor" }};
+	{{end}}
 
-	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset;
 
 	color: #fff;
 	text-align: center;
