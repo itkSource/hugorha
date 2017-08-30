@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="canonical" href="http://localhost:1313/licence/">
+	<link href="" rel="alternate" type="application/rss+xml" title="Hugorha" />
+	<style type="text/css">
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+
+@font-face {
+    font-family: 'special-font';
+    src: url('../font/minspsw.eot');
+    src: url('../font/minspsw.eot?#iefix') format('embedded-opentype'),
+         url('../font/minspsw.woff') format('woff'),
+         url('../font/minspsw.ttf') format('truetype'),
+         url('../font/minspsw.svg#minspsw') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+	font-family: sans-serif;
+    background-color: #fff;
+}
+.max-width {
+	width: 90%;
+	max-width: 1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.header {
+	padding: 20px 0 30px;
+}
+	.logo {
+		display: inline-block;
+		vertical-align: middle;
+		height: 60px;
+	}
+	.header-sitename {
+		font-family: 'special-font';
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 3em;
+		text-decoration: none;
+		color: #FFF;
+		text-shadow: 0 3px 0 #b22f84, 3px 0 0 #b22f84, 0 -3px 0 #b22f84, -3px 0 0 #b22f84, 2px 2px 0 #b22f84, -2px 2px 0 #b22f84, 2px -2px 0 #b22f84, -2px -2px 0 #b22f84;
+		margin-left: 20px;
+	}
+	.header-right {
+		float: right;
+		color: #888;
+		margin-top: 10px;
+		height: 100%;
+	}
+		.header-right a {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.btn {
+			display: inline-block;
+			border-radius: 2px;
+			border:1px solid #ddd;
+			padding: 10px 15px;
+			color: #888;
+			font-size: 0.9em;
+			text-decoration: none;
+		}
+			.btn:hover,
+			.btn:focus {
+				border-color: #b22f84;
+				color: #b22f84;
+			}
+
+
+.nav {
+	background: #d84394;
+	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
+	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 10;
+}
+	.nav .nav-link {
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		padding: 20px;
+		font-weight: bold;
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+	}
+	.nav-link:hover,
+	.nav-link:focus,
+	.nav-link.active {
+		background-color: rgba(0,0,0,0.2);
+	}
+    .nav .nav-link .sub-nav-link {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        list-style: none;
+        background-color: #680764;
+        padding: 10px;
+    }
+    .nav .nav-link .sub-nav-link li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .nav .nav-link:hover > .sub-nav-link {
+        display: block;
+    }
+
+
+	
+.content-wrapper {
+	position: relative;
+	padding: 40px 0 150px;
+}
+	.content {
+		position: relative;
+		box-sizing: border-box;
+		padding: 0 20px 0 40px;
+		line-height: 1.4em;
+		color: #666;
+	}
+	.content-withside {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(100% - 250px);
+	}
+		.content-withside img, .content img {
+			max-width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+		}
+		.content-withside .highlight, .content .highlight {
+			overflow: auto;
+			color: #fefefe;
+			padding: 6px;
+			border-radius: 2px;
+		}
+	.sidenav {
+		vertical-align: top;
+		display: inline-block;
+		box-sizing: border-box;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 80px;
+		width: 250px;
+		line-height: 1rem;
+	}
+		#TableOfContents {
+			border: 1px solid #eee;
+			padding: 10px 20px 20px;
+			top: 80px;
+			font-size: 0.9em;
+			overflow: auto;
+			max-height: 80vh;
+		}
+		#TableOfContents ul {
+			list-style-type: none;
+			margin: 0;
+		}
+			#TableOfContents a {
+				text-decoration: none;
+				color: #444;
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			#TableOfContents a:hover,
+			#TableOfContents a:focus {
+				background-color: #f5f5f5;
+			}
+
+			/* FIRST LEVEL */
+			#TableOfContents > ul > li > a {
+				color: #b22f84;
+				padding: 5px 0;
+			}
+			#TableOfContents > ul > li + li {
+				border-top: 1px solid #eee;
+			}
+				/* SECOND LEVEL */
+				#TableOfContents > ul > li > ul {
+					padding: 0 0 0 5px;
+					font-size: 0.9em;
+				}
+				/* SECOND LEVEL */
+				#TableOfContents > ul > li > ul > li > a {
+				}
+
+					/* THiRD LEVEL */
+					#TableOfContents > ul > li > ul > li > ul {
+						border-left: 1px solid #eee;
+						padding: 0 0 0 5px;
+						margin: 5px 0 10px 5px;
+						font-size: 0.9em;
+						color: #888;
+					}
+					#TableOfContents > ul > li > ul > li > ul >li > a {
+						color: #888;
+					}
+
+						/* FOURTH LEVEL */
+						#TableOfContents > ul > li > ul > li > ul > li > ul {
+							display: none;
+						}
+
+
+
+h1 {
+	font-family: 'special-font';
+	color: #b22f84;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	font-size: 2em;
+	font-weight: normal;
+	margin: 40px 0 40px -40px;
+}
+h1:first-child {
+	margin-top: 0;
+}
+
+h2 {
+	color: #444;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	margin: 40px 0 20px -20px;
+	font-size: 1.6em;
+}
+
+h3 {
+	color: #444;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	margin: 20px 0;
+	font-size: 1.2em;
+}
+
+h4 {
+	color: #444;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	margin: 20px 0;
+	font-size: 1.1em;
+}
+
+p {
+	padding: 20px 0;
+}
+h2 ~ p {
+	padding-left: 40px 0;
+}
+
+ul {
+	list-style-type: square;
+	margin: 20px 0 20px 40px;
+}
+
+a:link,
+a:visited {
+	color: #b22f84;
+}
+
+blockquote {
+	border-radius: 2px;
+	border:1px solid #b22f84;
+	color: #b22f84;
+	padding: 20px;
+}
+	blockquote p {
+		padding: 0;
+	}
+	blockquote p + p {
+		padding-top: 10px;
+	}
+
+code {
+	background-color: #444;
+	padding: 1px 5px;
+	font-size: 0.9em;
+	color: #fefefe;
+	font-family: "Courier New";
+}
+code:before,
+code:after {
+	content: "\""
+}
+
+table {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #eee;
+}
+	th, td {
+		border: 1px solid #eee;
+	}
+
+.footer {
+	background: #d84394;
+	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
+	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+
+	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+
+	color: #fff;
+	text-align: center;
+	padding: 40px 0;
+	font-size: 0.9em;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+	.header-sitename {
+		display:none;
+	}
+}
+
+@media screen and (max-width: 920px) {
+    .nav {
+        text-align: center;
+    }
+	.nav .nav-link  {
+		padding: 20px 8px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.nav .nav-link  {
+		padding: 10px 8px;
+	}
+	.sidenav {
+		display: none;
+	}
+	.content-withside {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.header {
+		display: none;
+	}
+	.nav .nav-link  {
+		font-size: 0.8em;
+		padding: 10px 1px;
+	}
+}
+	</style>
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+	
+	<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+	
+	<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+	
+	<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+	
+	<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+	
+	<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+	
+	<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+	
+	<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+	
+	<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+	
+	<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+	
+	<link rel="manifest" href="../images/favicon/manifest.json">
+	
+	<meta name="msapplication-TileColor" content="#ffffff">
+	
+	<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+	
+	<meta name="theme-color" content="#ffffff">
+	
+	<title>Hugorha - Licence</title>
+</head>
+<body>
+<header class="header">
+	<div class="max-width">
+		<img class="logo" src="http://localhost:1313/images/headerLogo.svg">
+		<div class="header-sitename">Hugorha</div>
+		<div class="header-right">
+			
+			<a href="http://www.itk.fr" target="blank" class="btn">itk</a>
+			
+			<a href="https://github.com/itkSource/hugorha" target="blank" class="btn">Fork Me</a>
+			
+		</div>
+	</div>
+</header>
+<nav class="nav">
+	<ul class="max-width">
+		
+		
+
+		
+		
+		<a href="http://localhost:1313/" class="nav-link ">
+			<span>Index</span>
+		</a>
+		
+		
+		
+		<a href="http://localhost:1313/styles/" class="nav-link ">
+			<span>Styles</span>
+		</a>
+		
+		
+		
+		<ul href="http://localhost:1313/" class="nav-link ">
+			<li>Showcase</li>
+			<ul class="sub-nav-link">
+				
+				<li><a href="http://lorhammer.itk.fr/">Lorhammer</a> </li>
+				
+				<li><a href="https://continuousevolution.gitlab.io/continuous-evolution/">ContinuousEvolution</a> </li>
+				
+			</ul>
+		</ul>
+		
+		
+		
+		<a href="http://localhost:1313/licence/" class="nav-link active">
+			<span>Licence</span>
+		</a>
+		
+		
+	</div>
+</nav>
+
+<div class="max-width content-wrapper">
+    
+		<div class="content">
+	        <p>Copyright 2017 ITK
+<a href="http://www.itk.fr">http://www.itk.fr</a></p>
+
+<p>Licensed under the Apache License, Version 2.0 (the &ldquo;License&rdquo;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &ldquo;AS IS&rdquo; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">-------------------------------------------------------------------------
+                              Apache License
+                        Version 2.0, January 2004
+                     http://www.apache.org/licenses/
+
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+   &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+   and distribution as defined by Sections 1 through 9 of this document.
+
+   &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+   the copyright owner that is granting the License.
+
+   &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+   other entities that control, are controlled by, or are under common
+   control with that entity. For the purposes of this definition,
+   &quot;control&quot; means (i) the power, direct or indirect, to cause the
+   direction or management of such entity, whether by contract or
+   otherwise, or (ii) ownership of fifty percent (50%) or more of the
+   outstanding shares, or (iii) beneficial ownership of such entity.
+
+   &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+   exercising permissions granted by this License.
+
+   &quot;Source&quot; form shall mean the preferred form for making modifications,
+   including but not limited to software source code, documentation
+   source, and configuration files.
+
+   &quot;Object&quot; form shall mean any form resulting from mechanical
+   transformation or translation of a Source form, including but
+   not limited to compiled object code, generated documentation,
+   and conversions to other media types.
+
+   &quot;Work&quot; shall mean the work of authorship, whether in Source or
+   Object form, made available under the License, as indicated by a
+   copyright notice that is included in or attached to the work
+   (an example is provided in the Appendix below).
+
+   &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+   form, that is based on (or derived from) the Work and for which the
+   editorial revisions, annotations, elaborations, or other modifications
+   represent, as a whole, an original work of authorship. For the purposes
+   of this License, Derivative Works shall not include works that remain
+   separable from, or merely link (or bind by name) to the interfaces of,
+   the Work and Derivative Works thereof.
+
+   &quot;Contribution&quot; shall mean any work of authorship, including
+   the original version of the Work and any modifications or additions
+   to that Work or Derivative Works thereof, that is intentionally
+   submitted to Licensor for inclusion in the Work by the copyright owner
+   or by an individual or Legal Entity authorized to submit on behalf of
+   the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+   means any form of electronic, verbal, or written communication sent
+   to the Licensor or its representatives, including but not limited to
+   communication on electronic mailing lists, source code control systems,
+   and issue tracking systems that are managed by, or on behalf of, the
+   Licensor for the purpose of discussing and improving the Work, but
+   excluding communication that is conspicuously marked or otherwise
+   designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+   &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+   on behalf of whom a Contribution has been received by Licensor and
+   subsequently incorporated within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   copyright license to reproduce, prepare Derivative Works of,
+   publicly display, publicly perform, sublicense, and distribute the
+   Work and such Derivative Works in Source or Object form.
+
+3. Grant of Patent License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   (except as stated in this section) patent license to make, have made,
+   use, offer to sell, sell, import, and otherwise transfer the Work,
+   where such license applies only to those patent claims licensable
+   by such Contributor that are necessarily infringed by their
+   Contribution(s) alone or by combination of their Contribution(s)
+   with the Work to which such Contribution(s) was submitted. If You
+   institute patent litigation against any entity (including a
+   cross-claim or counterclaim in a lawsuit) alleging that the Work
+   or a Contribution incorporated within the Work constitutes direct
+   or contributory patent infringement, then any patent licenses
+   granted to You under this License for that Work shall terminate
+   as of the date such litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the
+   Work or Derivative Works thereof in any medium, with or without
+   modifications, and in Source or Object form, provided that You
+   meet the following conditions:
+
+   (a) You must give any other recipients of the Work or
+       Derivative Works a copy of this License; and
+
+   (b) You must cause any modified files to carry prominent notices
+       stating that You changed the files; and
+
+   (c) You must retain, in the Source form of any Derivative Works
+       that You distribute, all copyright, patent, trademark, and
+       attribution notices from the Source form of the Work,
+       excluding those notices that do not pertain to any part of
+       the Derivative Works; and
+
+   (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+       distribution, then any Derivative Works that You distribute must
+       include a readable copy of the attribution notices contained
+       within such NOTICE file, excluding those notices that do not
+       pertain to any part of the Derivative Works, in at least one
+       of the following places: within a NOTICE text file distributed
+       as part of the Derivative Works; within the Source form or
+       documentation, if provided along with the Derivative Works; or,
+       within a display generated by the Derivative Works, if and
+       wherever such third-party notices normally appear. The contents
+       of the NOTICE file are for informational purposes only and
+       do not modify the License. You may add Your own attribution
+       notices within Derivative Works that You distribute, alongside
+       or as an addendum to the NOTICE text from the Work, provided
+       that such additional attribution notices cannot be construed
+       as modifying the License.
+
+   You may add Your own copyright statement to Your modifications and
+   may provide additional or different license terms and conditions
+   for use, reproduction, or distribution of Your modifications, or
+   for any such Derivative Works as a whole, provided Your use,
+   reproduction, and distribution of the Work otherwise complies with
+   the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise,
+   any Contribution intentionally submitted for inclusion in the Work
+   by You to the Licensor shall be under the terms and conditions of
+   this License, without any additional terms or conditions.
+   Notwithstanding the above, nothing herein shall supersede or modify
+   the terms of any separate license agreement you may have executed
+   with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade
+   names, trademarks, service marks, or product names of the Licensor,
+   except as required for reasonable and customary use in describing the
+   origin of the Work and reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or
+   agreed to in writing, Licensor provides the Work (and each
+   Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+   implied, including, without limitation, any warranties or conditions
+   of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+   PARTICULAR PURPOSE. You are solely responsible for determining the
+   appropriateness of using or redistributing the Work and assume any
+   risks associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory,
+   whether in tort (including negligence), contract, or otherwise,
+   unless required by applicable law (such as deliberate and grossly
+   negligent acts) or agreed to in writing, shall any Contributor be
+   liable to You for damages, including any direct, indirect, special,
+   incidental, or consequential damages of any character arising as a
+   result of this License or out of the use or inability to use the
+   Work (including but not limited to damages for loss of goodwill,
+   work stoppage, computer failure or malfunction, or any and all
+   other commercial damages or losses), even if such Contributor
+   has been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing
+   the Work or Derivative Works thereof, You may choose to offer,
+   and charge a fee for, acceptance of support, warranty, indemnity,
+   or other liability obligations and/or rights consistent with this
+   License. However, in accepting such obligations, You may act only
+   on Your own behalf and on Your sole responsibility, not on behalf
+   of any other Contributor, and only if You agree to indemnify,
+   defend, and hold each Contributor harmless for any liability
+   incurred by, or claims asserted against, such Contributor by reason
+   of your accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+</pre></div>
+
+	    </div>
+    
+</div>
+	<footer class="footer">Copyright © 2017 Itk. All Rights Reserved.</footer>
+</body>

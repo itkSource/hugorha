@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugorha</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Hugorha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Index</title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/</guid>
+      <description>hugorha Hugo theme for lorhammer
+Use it cd themes git clone https://github.com/itkSource/hugorha.git  Add hugorha has theme in your config.toml.
+All your page of first level menu must have menu: &amp;quot;main&amp;quot; in there meta.
+In your config you must have :
+[params] # The title of your homepage (to be rendered in /) homePageTitle = &#34;Hugorha&#34; # The logo name (not url) with the extension (placed in /static) logoFileName = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Licence</title>
+      <link>http://localhost:1313/licence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/licence/</guid>
+      <description>Copyright 2017 ITK http://www.itk.fr
+Licensed under the Apache License, Version 2.0 (the &amp;ldquo;License&amp;rdquo;); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &amp;ldquo;AS IS&amp;rdquo; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</description>
+    </item>
+    
+    <item>
+      <title>Styles</title>
+      <link>http://localhost:1313/styles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/styles/</guid>
+      <description> Styles Link [hugorha](https://github.com/itkSource/hugorha)  hugorha
+Image ![logo](http://localhost:1313/images/headerLogo.svg)  Alert &amp;gt; This is an important message.   This is an important message.
+ List * 1 list * 1.1 list * 1.2 list * 2 list * 3 list   1 list  1.1 list 1.2 list  2 list 3 list  Code ```js const a = {} ``  const a = {}  Table |Col1|Col2|Col3| |----|----|----| |line| ✔ | ✘ |     Col1 Col2 Col3     line ✔ ✘   line ✔ ✘   line ✔ ✘   line ✔ ✘   line ✔ ✘   line ✔ ✘    </description>
+    </item>
+    
+  </channel>
+</rss>
