@@ -3,29 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://itksource.github.io/hugorha/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://itksource.github.io/hugorha/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://itksource.github.io/hugorha/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/licence/</loc>
+    <loc>https://itksource.github.io/hugorha/licence/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/styles/</loc>
+    <loc>https://itksource.github.io/hugorha/styles/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://itksource.github.io/hugorha/tags/</loc>
     <priority>0</priority>
   </url>
   
