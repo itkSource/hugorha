@@ -1,6 +1,7 @@
 theme = "hugorha"
 themesdir = "../.."
 baseurl = "http://localhost:1313/"
+publishDir = "../docs"
 title = "Hugorha"
 PygmentsCodeFences = true
 relativeURLs = true

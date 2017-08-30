@@ -48,3 +48,12 @@ hugo server -wDs ./example
 ```
 
 * Open browser [localhost:1313](http://localhost:1313/)
+
+## Publish new gh-pages
+
+```bash
+hugo -s ./example
+git add -A .
+git commit -m "deploy new gh-pages"
+git push origin master
+```
