@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-	<link href="{{ `css/global.css` | absURL }}" rel="stylesheet">
+	<style type="text/css">
+		{{ partial "global.css" . | safeCSS }}
+	</style>
 	{{ range .Site.Params.favicons }}
 	{{ safeHTML . }}
 	{{ end }}

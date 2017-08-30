@@ -8,7 +8,7 @@ subnav: "false"
 
 # hugorha
 
-> Hugo theme by [itk.fr](http://itk.fr)
+Hugo theme for lorhammer
 
 ## Use it
 
@@ -44,6 +44,8 @@ favicons = [
     copyrightHTML = "Copyright &#xA9; 2013 John Doe. All Rights Reserved."
 ```
 
+> Full configuration can be found in [example/config.toml](https://github.com/itkSource/hugorha/blob/master/example/config.toml)
+
 ## Dev
 
 * Install [hugo](http://gohugo.io/overview/installing/)
@@ -54,5 +56,4 @@ hugo server -wDs ./example
 ```
 
 * Open browser [localhost:1313](http://localhost:1313/)
-
 

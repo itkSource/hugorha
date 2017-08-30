@@ -36,6 +36,8 @@ favicons = [
     copyrightHTML = "Copyright &#xA9; 2013 John Doe. All Rights Reserved."
 ```
 
+> Full configuration can be found in [example/config.toml](https://github.com/itkSource/hugorha/blob/master/example/config.toml)
+
 ## Dev
 
 * Install [hugo](http://gohugo.io/overview/installing/)

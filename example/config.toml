@@ -50,3 +50,6 @@ favicons = [
 
     [params.footer]
     copyrightHTML = "Copyright &#xA9; 2017 Itk. All Rights Reserved."
+
+    [params.css]
+    bgColor = "#fff"
