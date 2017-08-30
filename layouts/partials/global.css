@@ -68,7 +68,7 @@ body {
 			}
 
 
-.nav {
+.nav-wrapper {
 	background: #d84394;
 	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
 	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
@@ -80,38 +80,62 @@ body {
 	top: 0;
 	z-index: 10;
 }
-	.nav .nav-link {
+	.nav > li {
 		display: inline-block;
-		text-decoration: none;
-		color: #fff;
-		padding: 20px;
-		font-weight: bold;
-        list-style: none;
-        cursor: pointer;
-        position: relative;
-        margin: 0;
+	    list-style: none;
+	    position: relative;
 	}
-	.nav-link:hover,
-	.nav-link:focus,
-	.nav-link.active {
+	.nav li:hover,
+	.nav li:focus {
 		background-color: rgba(0,0,0,0.2);
 	}
-    .nav .nav-link .sub-nav-link {
-        display: none;
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        list-style: none;
-        background-color: #680764;
-        padding: 10px;
-    }
-    .nav .nav-link .sub-nav-link li a {
-        color: #fff;
-        text-decoration: none;
-    }
-    .nav .nav-link:hover > .sub-nav-link {
-        display: block;
-    }
+		.nav-link,
+		.nav-span {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			padding: 20px;
+			font-weight: bold;
+	        position: relative;
+	        margin: 0;
+		}
+		.nav-link {
+			cursor: pointer;
+		}
+		.nav-link-active {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+		.subnav {
+			position: absolute;
+			top: 100%;
+			overflow: hidden;
+			left: 0;
+			margin: 0;
+			background-color: #b22f84;
+			display: none;
+		}
+		.nav > li:hover > .subnav {
+	        display: block;
+	    }
+			.subnav li {
+			    list-style: none;
+			}
+
+			    .subnav-link {
+			    	display: block;
+			        cursor: pointer;
+			        padding: 15px;
+			        color: #fff;
+			        text-decoration: none;
+			        font-size: 0.9em;
+			    }
+				.subnav-link:hover,
+				.subnav-link:focus,
+				.subnav-link-active {
+					background-color: rgba(0,0,0,0.2);
+				}
+			    
 
 
 	
@@ -262,8 +286,8 @@ ul {
 	margin: 20px 0 20px 40px;
 }
 
-a:link,
-a:visited {
+.content a:link,
+.content a:visited {
 	color: #b22f84;
 }
 

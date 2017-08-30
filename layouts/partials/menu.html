@@ -1,27 +1,29 @@
-<nav class="nav">
-	<ul class="max-width">
+<nav class="nav-wrapper">
+	<ul class="nav max-width">
 		{{ $currentPage := . }}
 		{{ $baseUrl := .Site.BaseURL }}
 
 		{{ range .Site.Menus.main }}
-		{{if eq .Name $currentPage.Site.Params.homePageTitle}}
-		<a href="{{ $baseUrl }}" class="nav-link {{ if eq $currentPage.Title $currentPage.Site.Params.homePageTitle }}active{{ end }}">
-			<span>{{ .Name }}</span>
-		</a>
-		{{else if .HasChildren}}
-		<ul href="{{ .URL | absURL }}" class="nav-link {{if $currentPage.HasMenuCurrent "main" . }}active{{end}}">
-			<li>{{ .Name }}</li>
-			<ul class="sub-nav-link">
-				{{ range .Children }}
-				<li><a href="{{.URL | absURL }}">{{ .Name }}</a> </li>
-				{{ end }}
-			</ul>
-		</ul>
-		{{else}}
-		<a href="{{ .URL | absURL }}" class="nav-link {{ if eq $currentPage.URL .URL }}active{{ end }}">
-			<span>{{ .Name }}</span>
-		</a>
+		<li>
+			{{if eq .Name $currentPage.Site.Params.homePageTitle}}
+				<a href="{{ $baseUrl }}" class="nav-link {{ if eq $currentPage.Title $currentPage.Site.Params.homePageTitle }}nav-link-active{{ end }}">
+					{{ .Name }}
+				</a>
+			{{else if .HasChildren}}
+				<span class="nav-span">{{ .Name }}</span>
+				<ul href="{{ .URL | absURL }}" class="subnav {{if $currentPage.HasMenuCurrent "main" . }}subnav-active{{end}}">
+					{{ range .Children }}
+						<li>
+							<a class="subnav-link" href="{{.URL | absURL }}">{{ .Name }}</a>
+						</li>
+					{{ end }}
+				</ul>
+			{{else}}
+				<a href="{{ .URL | absURL }}" class="nav-link {{ if eq $currentPage.URL .URL }}nav-link-active{{ end }}">
+					{{ .Name }}
+				</a>
+			{{end}}
+		</li>
 		{{end}}
-		{{end}}
-	</div>
+	</ul>
 </nav>
