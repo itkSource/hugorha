@@ -52,7 +52,7 @@ hugo server -wDs ./example
 ## Publish new gh-pages
 
 ```bash
-hugo -s ./example
+HUGO_BASEURL="https://itksource.github.io/hugorha/" hugo -s ./example
 git add -A .
 git commit -m "deploy new gh-pages"
 git push origin master
