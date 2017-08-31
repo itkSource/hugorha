@@ -375,6 +375,11 @@ table {
 		border: 1px solid #eee;
 	}
 
+.gitInfos {
+	text-align: right;
+	padding: 10px;
+}
+
 .footer {
 	{{if .Param "css.gradient"}}
 		background: {{ .Param "css.mainColor" }};

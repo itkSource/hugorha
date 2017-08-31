@@ -5,6 +5,7 @@ publishDir = "../docs"
 title = "Hugorha"
 PygmentsCodeFences = true
 relativeURLs = true
+enableGitInfo = true
 
 [outputs]
     home = [ "HTML", "RSS", "JSON" ]

@@ -29,6 +29,8 @@ logoFileName = "images/headerLogo.svg"
 [outputs]
     home = [ "HTML", "RSS", "JSON" ]
     page = [ "HTML" ]
+# Add git infos on each files (last modified author and date)
+enableGitInfo = true
 # Favicons links
 favicons = [
     '<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">',

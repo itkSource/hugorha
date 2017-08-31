@@ -1,2 +1,3 @@
-	<footer class="footer">{{ htmlUnescape .Site.Params.footer.copyrightHTML }}</footer>
+    <div class="gitInfos">{{ if .GitInfo }}Make with ❤ by {{ .GitInfo.AuthorName }} the {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}{{ end }}</div>
+    <footer class="footer">{{ htmlUnescape .Site.Params.footer.copyrightHTML }}</footer>
 </body>
