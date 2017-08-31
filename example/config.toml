@@ -6,6 +6,10 @@ title = "Hugorha"
 PygmentsCodeFences = true
 relativeURLs = true
 
+[outputs]
+    home = [ "HTML", "RSS", "JSON" ]
+    page = [ "HTML" ]
+
 [[menu.main]]
     name = "Showcase"
     weight = 3

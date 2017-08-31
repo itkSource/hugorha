@@ -4,6 +4,7 @@ menu:
     main:
         weight: 2
 subnav: "true"
+description: "All Hugorha style"
 ---
 
 # Styles

@@ -25,6 +25,10 @@ In your config you must have :
 homePageTitle = "Hugorha"
 # The logo path (placed in /static) and name with the extention
 logoFileName = "images/headerLogo.svg"
+# Generate JSON to have runtime search
+[outputs]
+    home = [ "HTML", "RSS", "JSON" ]
+    page = [ "HTML" ]
 # Favicons links
 favicons = [
     '<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">',

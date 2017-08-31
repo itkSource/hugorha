@@ -4,6 +4,7 @@ menu:
     main:
         weight: 1
 subnav: "false"
+description: "Readme of hugorha"
 ---
 
 # hugorha
