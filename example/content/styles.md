@@ -3,6 +3,7 @@ title: "Styles"
 menu: 
     main:
         weight: 2
+        pre: '<i class="fa fa-text-height" aria-hidden="true"></i>'
 subnav: "true"
 description: "All Hugorha style"
 ---
@@ -32,6 +33,17 @@ description: "All Hugorha style"
 ```
 
 > This is an important message.
+
+## FontAwesome
+
+```text
+<i class="fa fa-heartbeat" aria-hidden="true"></i>
+<i class="fa fa-info-circle" aria-hidden="true"></i>
+<i class="fa fa-tags" aria-hidden="true"></i>
+```
+<i class="fa fa-heartbeat" aria-hidden="true"></i>
+<i class="fa fa-info-circle" aria-hidden="true"></i>
+<i class="fa fa-tags" aria-hidden="true"></i>
 
 ## List
 

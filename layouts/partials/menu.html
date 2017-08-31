@@ -7,10 +7,10 @@
 		<li>
 			{{if eq .Name $currentPage.Site.Params.homePageTitle}}
 				<a href="{{ $baseUrl }}" class="nav-link {{ if eq $currentPage.Title $currentPage.Site.Params.homePageTitle }}nav-link-active{{ end }}">
-					{{ .Name }}
+					{{.Pre}} {{ .Name }}
 				</a>
 			{{else if .HasChildren}}
-				<span class="nav-span">{{ .Name }}</span>
+				<span class="nav-span">{{.Pre}} {{ .Name }}</span>
 				<ul href="{{ .URL | absURL }}" class="subnav {{if $currentPage.HasMenuCurrent "main" . }}subnav-active{{end}}">
 					{{ range .Children }}
 						<li>
@@ -20,7 +20,7 @@
 				</ul>
 			{{else}}
 				<a href="{{ .URL | absURL }}" class="nav-link {{ if eq $currentPage.URL .URL }}nav-link-active{{ end }}">
-					{{ .Name }}
+					{{.Pre}} {{ .Name }}
 				</a>
 			{{end}}
 		</li>

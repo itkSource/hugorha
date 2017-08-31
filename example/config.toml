@@ -14,6 +14,7 @@ enableGitInfo = true
 [[menu.main]]
     name = "Showcase"
     weight = 3
+    pre = '<i class="fa fa-desktop" aria-hidden="true"></i>'
 [[menu.main]]
     name = "Lorhammer"
     parent = "Showcase"
@@ -50,8 +51,8 @@ favicons = [
 
     [params.header]
     links = [
-		'<a href="http://www.itk.fr" target="blank" class="btn">itk</a>',
-		'<a href="https://github.com/itkSource/hugorha" target="blank" class="btn">Fork Me</a>'
+		'<a href="http://www.itk.fr" target="blank" class="btn"><i class="fa fa-leaf" aria-hidden="true"></i> itk</a>',
+		'<a href="https://github.com/itkSource/hugorha" target="blank" class="btn"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork Me</a>'
     ]
 
     [params.footer]

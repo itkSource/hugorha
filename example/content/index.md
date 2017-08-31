@@ -3,10 +3,11 @@ title: "Index"
 menu: 
     main:
         weight: 1
+        pre: '<i class="fa fa-home" aria-hidden="true"></i>'
 subnav: "false"
 description: "Readme of hugorha"
 ---
-# hugorha
+# hugorha <i class="fa fa-heartbeat" aria-hidden="true"></i>
 
 Hugo theme for lorhammer
 
