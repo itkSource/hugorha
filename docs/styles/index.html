@@ -12,14 +12,17 @@
 
 @font-face {
     font-family: 'special-font';
-    src: url('../font/minspsw.eot');
-    src: url('../font/minspsw.eot?#iefix') format('embedded-opentype'),
-         url('../font/minspsw.woff') format('woff'),
-         url('../font/minspsw.ttf') format('truetype'),
-         url('../font/minspsw.svg#minspsw') format('svg');
+    src: url('../font/minspsw.woff') format('woff'),
+         url('../font/minspsw.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
+
+
+
+
+
 
 
 
@@ -47,8 +50,9 @@ body {
 		vertical-align: middle;
 		font-size: 3em;
 		text-decoration: none;
-		color: #FFF;
-		text-shadow: 0 3px 0 #b22f84, 3px 0 0 #b22f84, 0 -3px 0 #b22f84, -3px 0 0 #b22f84, 2px 2px 0 #b22f84, -2px 2px 0 #b22f84, 2px -2px 0 #b22f84, -2px -2px 0 #b22f84;
+		
+			color: #60adea;
+		
 		margin-left: 20px;
 	}
 	.header-right {
@@ -56,7 +60,42 @@ body {
 		color: #888;
 		margin-top: 10px;
 		height: 100%;
+		position: relative;
 	}
+		.search-input {
+			padding: 9px;
+			margin: 0 5px;
+			border-radius: 2px;
+			border: 1px solid #ddd;
+		}
+		.search-results {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			margin: 0 10px;
+			padding: 0;
+			z-index: 100;
+			list-style: none;
+			text-decoration: none;
+			border: 1px solid #ddd;
+			border-top: transparent;
+			top: calc(100% - 1px);
+		}
+			.search-result {
+				padding: 5px;
+			}
+				.search-result a:link,
+				.search-result a:visited {
+					color: #60adea;
+					text-decoration: none;
+				}
+				.search-result p {
+					color: #444;
+					padding: 5px 5px 10px;
+				}
+		.search-input:focus + .search-results {
+			display: block;
+		}
 		.header-right a {
 			display: inline-block;
 			vertical-align: middle;
@@ -72,55 +111,78 @@ body {
 		}
 			.btn:hover,
 			.btn:focus {
-				border-color: #b22f84;
-				color: #b22f84;
+				border-color: #60adea;
+				color: #60adea;
 			}
 
 
-.nav {
-	background: #d84394;
-	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
-	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
-	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+.nav-wrapper {
+	
+		background: #60adea;
+	
+	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset, 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 	z-index: 10;
 }
-	.nav .nav-link {
+
+	.nav > li {
 		display: inline-block;
-		text-decoration: none;
-		color: #fff;
-		padding: 20px;
-		font-weight: bold;
-        list-style: none;
-        cursor: pointer;
-        position: relative;
-        margin: 0;
+	    list-style: none;
+	    position: relative;
 	}
-	.nav-link:hover,
-	.nav-link:focus,
-	.nav-link.active {
+	.nav li:hover,
+	.nav li:focus {
 		background-color: rgba(0,0,0,0.2);
 	}
-    .nav .nav-link .sub-nav-link {
-        display: none;
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        list-style: none;
-        background-color: #680764;
-        padding: 10px;
-    }
-    .nav .nav-link .sub-nav-link li a {
-        color: #fff;
-        text-decoration: none;
-    }
-    .nav .nav-link:hover > .sub-nav-link {
-        display: block;
-    }
+		.nav-link,
+		.nav-span {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			padding: 20px;
+			font-weight: bold;
+	        position: relative;
+	        margin: 0;
+		}
+		.nav-link {
+			cursor: pointer;
+		}
+		.nav-link-active {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+		.subnav {
+			position: absolute;
+			top: 100%;
+			overflow: hidden;
+			left: 0;
+			margin: 0;
+			background-color: #60adea;
+			display: none;
+		}
+		.nav > li:hover > .subnav {
+	        display: block;
+	    }
+			.subnav li {
+			    list-style: none;
+			}
+
+			    .subnav-link {
+			    	display: block;
+			        cursor: pointer;
+			        padding: 15px;
+			        color: #fff;
+			        text-decoration: none;
+			        font-size: 0.9em;
+			    }
+				.subnav-link:hover,
+				.subnav-link:focus,
+				.subnav-link-active {
+					background-color: rgba(0,0,0,0.2);
+				}
+			    
 
 
 	
@@ -188,7 +250,7 @@ body {
 
 			/* FIRST LEVEL */
 			#TableOfContents > ul > li > a {
-				color: #b22f84;
+				color: #60adea;
 				padding: 5px 0;
 			}
 			#TableOfContents > ul > li + li {
@@ -224,7 +286,7 @@ body {
 
 h1 {
 	font-family: 'special-font';
-	color: #b22f84;
+	color: #60adea;
 	border-bottom: 1px solid #eee;
 	padding: 10px 0;
 	font-size: 2em;
@@ -271,15 +333,15 @@ ul {
 	margin: 20px 0 20px 40px;
 }
 
-a:link,
-a:visited {
-	color: #b22f84;
+.content a:link,
+.content a:visited {
+	color: #60adea;
 }
 
 blockquote {
 	border-radius: 2px;
-	border:1px solid #b22f84;
-	color: #b22f84;
+	border:1px solid #60adea;
+	color: #60adea;
 	padding: 20px;
 }
 	blockquote p {
@@ -311,13 +373,11 @@ table {
 	}
 
 .footer {
-	background: #d84394;
-	background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
-	background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
+	
+		background: #60adea;
+	
 
-	box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.3) inset;
+	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset;
 
 	color: #fff;
 	text-align: center;
@@ -364,6 +424,7 @@ table {
 	}
 }
 	</style>
+	<script src="https://itksource.github.io/hugorha/js/js-search.1.4.2.js"></script>
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
 	
@@ -404,9 +465,11 @@ table {
 <body>
 <header class="header">
 	<div class="max-width">
-		<img class="logo" src="https://itksource.github.io/hugorha/images/headerLogo.svg">
+		<img class="logo" src="https://itksource.github.io/hugorha/images/headerLogo.png">
 		<div class="header-sitename">Hugorha</div>
 		<div class="header-right">
+			<input id="searchJs" type="text" class="search-input" />
+			<ul id="searchResultsJs" class="search-results"></ul>
 			
 			<a href="http://www.itk.fr" target="blank" class="btn">itk</a>
 			
@@ -415,44 +478,79 @@ table {
 		</div>
 	</div>
 </header>
-<nav class="nav">
-	<ul class="max-width">
+<script>
+    window.onload = function() {
+        const search = new JsSearch.Search('url');
+        search.addIndex('title');
+        search.addIndex('description');
+        search.addIndex('content');
+	    const input = document.getElementById("searchJs");
+	    const results = document.getElementById("searchResultsJs");
+	    input.addEventListener('keyup', (e) => {
+            results.innerHTML = '';
+	        search.search(e.target.value).forEach(result => {
+				const li = document.createElement("li");
+				li.classList.add('search-result');
+				li.innerHTML = `<a href="${result.url}">${result.title}<p>${result.description}</p></a>`;
+                results.appendChild(li);
+			})
+
+        });
+		fetch("/index.json")
+			.then((data) => data.json())
+			.then(data => {
+				search.addDocuments(data);
+			})
+    }
+</script>
+<nav class="nav-wrapper">
+	<ul class="nav max-width">
 		
 		
 
 		
+		<li>
+			
+				<a href="https://itksource.github.io/hugorha/" class="nav-link ">
+					Index
+				</a>
+			
+		</li>
 		
-		<a href="https://itksource.github.io/hugorha/" class="nav-link ">
-			<span>Index</span>
-		</a>
+		<li>
+			
+				<a href="https://itksource.github.io/hugorha/styles/" class="nav-link nav-link-active">
+					Styles
+				</a>
+			
+		</li>
 		
+		<li>
+			
+				<span class="nav-span">Showcase</span>
+				<ul href="https://itksource.github.io/hugorha/" class="subnav ">
+					
+						<li>
+							<a class="subnav-link" href="http://lorhammer.itk.fr/">Lorhammer</a>
+						</li>
+					
+						<li>
+							<a class="subnav-link" href="https://continuousevolution.gitlab.io/continuous-evolution/">ContinuousEvolution</a>
+						</li>
+					
+				</ul>
+			
+		</li>
 		
+		<li>
+			
+				<a href="https://itksource.github.io/hugorha/licence/" class="nav-link ">
+					Licence
+				</a>
+			
+		</li>
 		
-		<a href="https://itksource.github.io/hugorha/styles/" class="nav-link active">
-			<span>Styles</span>
-		</a>
-		
-		
-		
-		<ul href="https://itksource.github.io/hugorha/" class="nav-link ">
-			<li>Showcase</li>
-			<ul class="sub-nav-link">
-				
-				<li><a href="http://lorhammer.itk.fr/">Lorhammer</a> </li>
-				
-				<li><a href="https://continuousevolution.gitlab.io/continuous-evolution/">ContinuousEvolution</a> </li>
-				
-			</ul>
-		</ul>
-		
-		
-		
-		<a href="https://itksource.github.io/hugorha/licence/" class="nav-link ">
-			<span>Licence</span>
-		</a>
-		
-		
-	</div>
+	</ul>
 </nav>
 
 <div class="max-width content-wrapper">
