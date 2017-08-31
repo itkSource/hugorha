@@ -38,9 +38,6 @@
 	    const input = document.getElementById("searchJs");
 	    const results = document.getElementById("searchResultsJs");
 	    input.addEventListener('keyup', (e) => {
-	        if (!results.classList.contains('search-results-active')) {
-	            results.classList.add('search-results-active')
-			}
             results.innerHTML = '';
 	        search.search(e.target.value).forEach(result => {
 				const li = document.createElement("li");

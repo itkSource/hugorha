@@ -80,14 +80,16 @@ body {
 			.search-result {
 				padding: 5px;
 			}
-				.search-result a {
+				.search-result a:link,
+				.search-result a:visited {
+					color: {{ .Param "css.mainColor" }};
 					text-decoration: none;
 				}
 				.search-result p {
 					color: #444;
 					padding: 5px 5px 10px;
 				}
-		.search-results-active {
+		.search-input:focus + .search-results {
 			display: block;
 		}
 		.header-right a {
