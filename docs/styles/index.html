@@ -12,8 +12,8 @@
 
 @font-face {
     font-family: 'special-font';
-    src: url('../font/minspsw.woff') format('woff'),
-         url('../font/minspsw.woff2') format('woff2');
+    src: url('https://itksource.github.io/hugorha/font/minspsw.woff') format('woff'),
+         url('https://itksource.github.io/hugorha/font/minspsw.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -496,7 +496,7 @@ table {
 			})
 
         });
-		fetch("/index.json")
+		fetch("https://itksource.github.io/hugorha/index.json")
 			.then((data) => data.json())
 			.then(data => {
 				search.addDocuments(data);
