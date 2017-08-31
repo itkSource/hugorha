@@ -3,8 +3,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 @font-face {
     font-family: 'special-font';
-    src: url('../{{ .Param "css.specialFontName" }}.woff') format('woff'),
-         url('../{{ .Param "css.specialFontName" }}.woff2') format('woff2');
+    src: url('{{ (delimit (slice (.Param "css.specialFontName") "woff") ".") | absURL }}') format('woff'),
+         url('{{ (delimit (slice (.Param "css.specialFontName") "woff2") ".") | absURL }}') format('woff2');
     font-weight: normal;
     font-style: normal;
 }

@@ -47,7 +47,7 @@
 			})
 
         });
-		fetch("/index.json")
+		fetch({{"index.json" | absURL}})
 			.then((data) => data.json())
 			.then(data => {
 				search.addDocuments(data);
