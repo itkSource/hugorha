@@ -90,7 +90,8 @@ body {
 					padding: 5px 5px 10px;
 				}
 		.search-input:focus + .search-results,
-		.search-input:focus + .search-results:focus{
+		.search-results:hover,
+		.search-results:active{
 			display: block;
 		}
 		.header-right a {
