@@ -150,6 +150,7 @@ body {
 			font-weight: bold;
 	        position: relative;
 	        margin: 0;
+			cursor: pointer;
 		}
 		.nav-link {
 			cursor: pointer;
