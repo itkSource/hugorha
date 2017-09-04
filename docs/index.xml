@@ -42,8 +42,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
       
       <guid>https://itksource.github.io/hugorha/styles/</guid>
       <description>Styles Link [hugorha](https://github.com/itkSource/hugorha)  hugorha
-Image ![logo](http://localhost:1313/images/headerLogo.svg?height=80px)   Be careful the image is sized at runtime (by js), all style are available but think it&amp;rsquo;s set by js (border-radius become borderRadius&amp;hellip;)
- ![logo](http://localhost:1313/images/headerLogo.svg?width=120px&amp;amp;borderRadius=50%)  Alert &amp;gt; This is an important message.   This is an important message.
+Image ![logo](/images/headerLogo.svg?height=80px)   Be careful the image is sized at runtime (by js), all style are available but think it&amp;rsquo;s set by js (border-radius become borderRadius&amp;hellip;)
+ ![logo](/images/headerLogo.svg?width=120px&amp;amp;borderRadius=50%)  Alert &amp;gt; This is an important message.   This is an important message.
  FontAwesome &amp;lt;i class=&amp;quot;fa fa-heartbeat&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;i class=&amp;quot;fa fa-info-circle&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;i class=&amp;quot;fa fa-tags&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;    
 List * 1 list * 1.</description>
     </item>

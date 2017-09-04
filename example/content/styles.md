@@ -21,18 +21,18 @@ description: "All Hugorha style"
 ## Image
 
 ```text
-![logo](http://localhost:1313/images/headerLogo.svg?height=80px)
+![logo](/images/headerLogo.svg?height=80px)
 ```
 
-![logo](http://localhost:1313/images/headerLogo.svg?height=80px)
+![logo](/images/headerLogo.svg?height=80px)
 
 > Be careful the image is sized at runtime (by js), all style are available but think it's set by js (border-radius become borderRadius...)
 
 ```text
-![logo](http://localhost:1313/images/headerLogo.svg?width=120px&borderRadius=50%)
+![logo](/images/headerLogo.svg?width=120px&borderRadius=50%)
 ```
 
-![logo](http://localhost:1313/images/headerLogo.svg?width=220px&borderRadius=50%)
+![logo](/images/headerLogo.svg?width=220px&borderRadius=50%)
 
 ## Alert
 
