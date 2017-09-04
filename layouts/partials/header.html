@@ -35,6 +35,21 @@
 </header>
 <script>
     window.onload = function() {
+        //image size
+        document.querySelectorAll("img").forEach(img => {
+            console.log(img.src);
+			const styles = img.src.split("?");
+			if (styles.length > 1) {
+                styles[1].split("&").forEach(arg => {
+                    const style = arg.split("=");
+                    if (style.length > 1) {
+                        img.style[style[0]] = style[1]
+                    }
+                })
+			}
+
+		});
+        //init search
         const search = new JsSearch.Search('url');
         search.addIndex('title');
         search.addIndex('description');
