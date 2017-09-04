@@ -72,7 +72,7 @@ body {
 			display: none;
 			position: absolute;
 			background-color: #fff;
-			margin: 0 10px;
+			margin: 0 24px;
 			padding: 0;
 			z-index: 100;
 			list-style: none;
@@ -93,7 +93,9 @@ body {
 					color: #444;
 					padding: 5px 5px 10px;
 				}
-		.search-input:focus + .search-results {
+		.search-input:focus + .search-results,
+		.search-results:hover,
+		.search-results:active{
 			display: block;
 		}
 		.header-right a {
@@ -145,6 +147,7 @@ body {
 			font-weight: bold;
 	        position: relative;
 	        margin: 0;
+			cursor: pointer;
 		}
 		.nav-link {
 			cursor: pointer;
@@ -358,10 +361,6 @@ code {
 	color: #fefefe;
 	font-family: "Courier New";
 }
-code:before,
-code:after {
-	content: "\""
-}
 
 table {
 	width: 100%;
@@ -493,6 +492,21 @@ table {
 </header>
 <script>
     window.onload = function() {
+        
+        document.querySelectorAll("img").forEach(img => {
+            console.log(img.src);
+			const styles = img.src.split("?");
+			if (styles.length > 1) {
+                styles[1].split("&").forEach(arg => {
+                    const style = arg.split("=");
+                    if (style.length > 1) {
+                        img.style[style[0]] = style[1]
+                    }
+                })
+			}
+
+		});
+        
         const search = new JsSearch.Search('url');
         search.addIndex('title');
         search.addIndex('description');
@@ -580,10 +594,18 @@ table {
 <p><a href="https://github.com/itkSource/hugorha">hugorha</a></p>
 
 <h2 id="image">Image</h2>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%">![logo](http://localhost:1313/images/headerLogo.svg)
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">![logo](http://localhost:1313/images/headerLogo.svg?height=80px)
 </pre></div>
 
-<p><img src="http://localhost:1313/images/headerLogo.svg" alt="logo" /></p>
+<p><img src="http://localhost:1313/images/headerLogo.svg?height=80px" alt="logo" /></p>
+
+<blockquote>
+<p>Be careful the image is sized at runtime (by js), all style are available but think it&rsquo;s set by js (border-radius become borderRadius&hellip;)</p>
+</blockquote>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">![logo](http://localhost:1313/images/headerLogo.svg?width=120px&amp;borderRadius=50%)
+</pre></div>
+
+<p><img src="http://localhost:1313/images/headerLogo.svg?width=220px&amp;borderRadius=50%" alt="logo" /></p>
 
 <h2 id="alert">Alert</h2>
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%">&gt; This is an important message.
@@ -621,6 +643,12 @@ table {
 <li>2 list</li>
 <li>3 list</li>
 </ul>
+
+<h2 id="inline-code">Inline Code</h2>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">`important thing!`
+</pre></div>
+
+<p><code>important thing!</code></p>
 
 <h2 id="code">Code</h2>
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%">```js
@@ -694,6 +722,7 @@ const a = {}
 <li><a href="#alert">Alert</a></li>
 <li><a href="#fontawesome">FontAwesome</a></li>
 <li><a href="#list">List</a></li>
+<li><a href="#inline-code">Inline Code</a></li>
 <li><a href="#code">Code</a></li>
 <li><a href="#table">Table</a></li>
 </ul></li>
@@ -702,6 +731,6 @@ const a = {}
 	    </div>
 	
 </div>
-    <div class="gitInfos">Make with ❤ by Romain Maneschi the August 31, 2017</div>
+    <div class="gitInfos">Make with ❤ by Romain Maneschi the September 4, 2017</div>
     <footer class="footer">Copyright © 2017 Itk. All Rights Reserved.</footer>
 </body>

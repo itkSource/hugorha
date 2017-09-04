@@ -79,7 +79,7 @@ body {
 			display: none;
 			position: absolute;
 			background-color: #fff;
-			margin: 0 10px;
+			margin: 0 24px;
 			padding: 0;
 			z-index: 100;
 			list-style: none;
@@ -100,7 +100,9 @@ body {
 					color: #444;
 					padding: 5px 5px 10px;
 				}
-		.search-input:focus + .search-results {
+		.search-input:focus + .search-results,
+		.search-results:hover,
+		.search-results:active{
 			display: block;
 		}
 		.header-right a {
@@ -152,6 +154,7 @@ body {
 			font-weight: bold;
 	        position: relative;
 	        margin: 0;
+			cursor: pointer;
 		}
 		.nav-link {
 			cursor: pointer;
@@ -365,10 +368,6 @@ code {
 	color: #fefefe;
 	font-family: "Courier New";
 }
-code:before,
-code:after {
-	content: "\""
-}
 
 table {
 	width: 100%;
@@ -500,6 +499,21 @@ table {
 </header>
 <script>
     window.onload = function() {
+        
+        document.querySelectorAll("img").forEach(img => {
+            console.log(img.src);
+			const styles = img.src.split("?");
+			if (styles.length > 1) {
+                styles[1].split("&").forEach(arg => {
+                    const style = arg.split("=");
+                    if (style.length > 1) {
+                        img.style[style[0]] = style[1]
+                    }
+                })
+			}
+
+		});
+        
         const search = new JsSearch.Search('url');
         search.addIndex('title');
         search.addIndex('description');
