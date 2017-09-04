@@ -69,6 +69,14 @@ description: "All Hugorha style"
 * 2 list
 * 3 list
 
+## Inline Code
+
+```text
+`important thing!`
+```
+
+`important thing!`
+
 ## Code
 
 ```text

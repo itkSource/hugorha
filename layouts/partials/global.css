@@ -364,10 +364,6 @@ code {
 	color: #fefefe;
 	font-family: "Courier New";
 }
-code:before,
-code:after {
-	content: "\""
-}
 
 table {
 	width: 100%;
