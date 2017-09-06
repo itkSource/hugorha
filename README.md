@@ -1,6 +1,8 @@
 # hugorha
 
-Hugo theme for lorhammer
+Hugo theme for lorhammer.
+
+Live demo here : https://itksource.github.io/hugorha/
 
 ## Hugo project
 
