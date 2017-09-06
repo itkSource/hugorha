@@ -30,7 +30,7 @@ All your page of first level menu must have `menu: "main"` in there meta.
 
 In your config you must have :
 
-```toml
+```text
 [params]
 # The title of your homepage (to be rendered in /)
 homePageTitle = "Hugorha"
