@@ -12,7 +12,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
 	font-family: sans-serif;
-    background-color: {{ .Param "css.bgColor" }};
+    background-color: {{ .Param "css.bgColor" | default "#FFF" }};
     color: {{ .Param "css.textColor" | default "#222" }};
 }
 .max-width {
@@ -36,7 +36,7 @@ body {
 		font-size: 3em;
 		text-decoration: none;
 		{{if .Param "css.siteNameBorder"}}
-			color: {{ .Param "css.bgColor" }};
+			color: {{ .Param "css.bgColor" | default "#FFF" }};
 			text-shadow: 0 3px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 3px 0 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 0 -3px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -3px 0 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 2px 2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -2px 2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 2px -2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -2px -2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }};
 		{{else}}
 			color: {{ .Param "css.mainColor"  | default "#468ef4" }};
@@ -65,7 +65,7 @@ body {
 			color: {{ .Param "css.textColor" | default "#222" }};
 		}
 			.search-input:focus {
-				border-color: {{ .Param "css.mainColor"  | default "#468ef4" }};
+				border-color: {{ .Param "css.mainColor" | default "#468ef4" }};
 			}
 		.search-results {
 			display: none;
@@ -80,7 +80,7 @@ body {
 			text-decoration: none;
 			border: 1px solid #ddd;
 			border-top: transparent;
-			background-color: {{ .Param "css.bgColor" }};
+			background-color: {{ .Param "css.bgColor" | default "#FFF" }};
 		}
 			.search-result {
 				border-top: 1px solid #eee;
@@ -97,7 +97,7 @@ body {
 				}
 				.search-result a:link,
 				.search-result a:visited {
-					color: {{ .Param "css.mainColor"  | default "#468ef4" }};
+					color: {{ .Param "css.mainColor" | default "#468ef4" }};
 					text-decoration: none;
 				}
 				.search-result p {
@@ -366,8 +366,8 @@ ul {
 
 blockquote {
 	border-radius: 2px;
-	border:1px solid {{ .Param "css.alertColor" }};
-	color: {{ .Param "css.alertColor" }};
+	border:1px solid {{ .Param "css.alertColor" | default "red" }};
+	color: {{ .Param "css.alertColor" | default "red" }};
 	padding: 10px 20px;
 	margin: 20px;
 }

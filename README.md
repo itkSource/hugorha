@@ -47,14 +47,28 @@ favicons = [
 
 
     [params.css]
-    # The font files path (placed in /static) and name with the extention. Only need WOFF2 and WOFF format
+    # The font files path (placed in /static) and name with the extention. Only need WOFF2 and WOFF format [Default : sans-serif]
     specialFontName = "font/minspsw"
-    # the background color
+
+    # the background color [Default : #FFF]
     bgColor = "#fff"
-    # the main color
+    # the main color [Default : #60adea]
     mainColor = "#60adea"
-    # If true the Site Name in the header will be white and outlined with the main color
-    nameColorInverted = false
+    # if gradient 1 and 2 are set, the background of menu and footer will be a gradient
+    gradient_1 = "#468ef4"
+    gradient_2 = "#266ed4"
+
+    # The text color [Default : #222]
+    textColor = "#222"
+    # The text color on the main color (like the menu) [Default : #FFF]
+    textColorOnMainColor = "#fff"
+
+    # If true the Site Name in the header will be only outlined with the main color [Default : false]
+    siteNameBorder = false
+
+    # Color of the alert block [Default : red]
+    alertColor = "red"
+
     
 ```
 
