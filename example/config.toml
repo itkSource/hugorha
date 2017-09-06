@@ -60,11 +60,14 @@ favicons = [
 
     [params.css]
     specialFontName = "font/minspsw"
-    bgColor = "#fff"
-    mainColor = "#60adea"
-    alertColor = "#F00"
 
-    nameColorInverted = false
-    gradient = ["#60adea", "#ffadea"]
-    
-    defaultColor = "#b22f84"
+    mainColor = "#468ef4"
+    gradient_1 = "#468ef4"
+    gradient_2 = "#266ed4"
+    textColor = "#222"
+
+    bgColor = "#fff"
+    textColorOnMainColor = "#fff"
+
+    alertColor = "red"
+    siteNameBorder = false
