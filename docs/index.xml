@@ -15,12 +15,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://itksource.github.io/hugorha/</guid>
-      <description>hugorha  Hugo theme for lorhammer
+      <description>hugorha Hugo theme for lorhammer.
+Live demo here : https://itksource.github.io/hugorha/
 Hugo project https://gohugo.io/
 Use hugorha cd themes git clone https://github.com/itkSource/hugorha.git  Add hugorha has theme in your config.toml.
 All your page of first level menu must have menu: &amp;quot;main&amp;quot; in there meta.
 In your config you must have :
-[params] # The title of your homepage (to be rendered in /) homePageTitle = &amp;quot;Hugorha&amp;quot; # The logo path (placed in /static) and name with the extention logoFileName = &amp;quot;images/headerLogo.</description>
+[params] # The title of your homepage (to be rendered in /) homePageTitle = &#34;Hugorha&#34; # The logo path (placed in /static) and name with the extention logoFileName = &#34;</description>
     </item>
     
     <item>

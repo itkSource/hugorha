@@ -1,13 +1,6 @@
-
-    
-
-    
-
-    
-        <!doctype html>
+<!doctype html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.27-DEV" />
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -669,9 +662,11 @@ table {
 		<div class="content">
 	        
 
-<h1 id="hugorha-i-class-fa-fa-heartbeat-aria-hidden-true-i">hugorha <i class="fa fa-heartbeat" aria-hidden="true"></i></h1>
+<h1 id="hugorha">hugorha</h1>
 
-<p>Hugo theme for lorhammer</p>
+<p>Hugo theme for lorhammer.</p>
+
+<p>Live demo here : <a href="https://itksource.github.io/hugorha/">https://itksource.github.io/hugorha/</a></p>
 
 <h2 id="hugo-project">Hugo project</h2>
 
@@ -687,43 +682,56 @@ git clone https://github.com/itkSource/hugorha.git
 <p>All your page of first level menu must have <code>menu: &quot;main&quot;</code> in there meta.</p>
 
 <p>In your config you must have :</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%">[params]
+[params]
 # The title of your homepage (to be rendered in /)
-homePageTitle = &quot;Hugorha&quot;
+homePageTitle = "Hugorha"
 # The logo path (placed in /static) and name with the extention
-logoFileName = &quot;images/headerLogo.svg&quot;
+logoFileName = "images/headerLogo.svg"
 # Generate JSON to have runtime search
 [outputs]
-    home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot; ]
-    page = [ &quot;HTML&quot; ]
+    home = [ "HTML", "RSS", "JSON" ]
+    page = [ "HTML" ]
 # Add git infos on each files (last modified author and date)
 enableGitInfo = true
 # Favicons links
 favicons = [
-    &#39;&lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;57x57&quot; href=&quot;/images/favicon/apple-icon-57x57.png&quot;&gt;&#39;,
-    &#39;...&#39;
+    '<link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">',
+    '...'
 ]
 
     [params.header]
     # The links (label, src) rendered in top /right site
-    links = [ [ &quot;itk&quot;, &quot;http://www.itk.fr&quot; ], [ &quot;ForkMe ImFamous&quot;, &quot;http://gitlab.com/itk.fr&quot; ] ]
+    links = [ [ "itk", "http://www.itk.fr" ], [ "ForkMe ImFamous", "http://gitlab.com/itk.fr" ] ]
 
     [params.footer]
     # The copyright rendered in footer
-    copyrightHTML = &quot;Copyright © 2013 John Doe. All Rights Reserved.&quot;
+    copyrightHTML = "Copyright © 2013 John Doe. All Rights Reserved."
 
 
     [params.css]
-    # The font files path (placed in /static) and name with the extention. Only need WOFF2 and WOFF format
-    specialFontName = &quot;font/minspsw&quot;
-    # the background color
-    bgColor = &quot;#fff&quot;
-    # the main color
-    mainColor = &quot;#60adea&quot;
-    # If true the Site Name in the header will be white and outlined with the main color
-    nameColorInverted = false
+    # The font files path (placed in /static) and name with the extention. Only need WOFF2 and WOFF format [Default : sans-serif]
+    specialFontName = "font/minspsw"
+
+    # the background color [Default : #FFF]
+    bgColor = "#fff"
+    # the main color [Default : #60adea]
+    mainColor = "#60adea"
+    # if gradient 1 and 2 are set, the background of menu and footer will be a gradient
+    gradient_1 = "#468ef4"
+    gradient_2 = "#266ed4"
+
+    # The text color [Default : #222]
+    textColor = "#222"
+    # The text color on the main color (like the menu) [Default : #FFF]
+    textColorOnMainColor = "#fff"
+
+    # If true the Site Name in the header will be only outlined with the main color [Default : false]
+    siteNameBorder = false
+
+    # Color of the alert block [Default : red]
+    alertColor = "red"
+
     
-</pre></div>
 
 <blockquote>
 <p>Full configuration can be found in <a href="https://github.com/itkSource/hugorha/blob/master/example/config.toml">example/config.toml</a></p>
@@ -753,14 +761,7 @@ git push origin master
     
 </div>
     <div class="gitInfos">
-    	<div class="gitInfos-text">This page was written with ❤ by Romain Maneschi the August 31, 2017</div>
+    	<div class="gitInfos-text">This page was written with ❤ by Romain Maneschi the September 6, 2017</div>
     </div>
     <footer class="footer">Copyright © 2017 Itk. All Rights Reserved.</footer>
 </body>
-    
-
-    
-
-    
-
-    
