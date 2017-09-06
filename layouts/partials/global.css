@@ -58,46 +58,64 @@ body {
 		height: 100%;
 		position: relative;
 	}
+		.header-right .fa-search {
+			position: absolute;
+			top: 8px;
+			left: 10px;
+		}
 		.search-input {
-			padding: 9px;
-			margin: 0 5px;
+			padding: 9px 9px 9px 40px;
+			width: 170px;
+			margin: 0 5px 0 0;
 			border-radius: 2px;
 			border: 1px solid #ddd;
 		}
+			.search-input:focus {
+				border-color: {{ .Param "css.mainColor" }};
+			}
 		.search-results {
 			display: none;
 			position: absolute;
-			background-color: {{ .Param "css.bgColor" }};
-			margin: 0 24px;
+			margin: 2px 0 0;
 			padding: 0;
+			left: 0;
+			top: 100%;
+			width:219px;
 			z-index: 100;
 			list-style: none;
 			text-decoration: none;
 			border: 1px solid #ddd;
 			border-top: transparent;
-			top: calc(100% - 1px);
+			background-color: {{ .Param "css.bgColor" }};
 		}
 			.search-result {
-				padding: 5px;
+				border-top: 1px solid #eee;
 			}
+			.search-result:hover,
+			.search-result:focus {
+				background-color: rgba(0,0,0,0.02);
+			}
+			.search-result + .search-result {
+			}
+				.search-result a {
+					display: block;
+					padding: 10px;
+				}
 				.search-result a:link,
 				.search-result a:visited {
 					color: {{ .Param "css.mainColor" }};
 					text-decoration: none;
 				}
 				.search-result p {
-					color: #444;
-					padding: 5px 5px 10px;
+					color: #888;
+					font-size: 0.8em;
+					font-style: italic;
+					padding: 5px 5px;
 				}
-		.search-input:focus + .search-results,
-		.search-results:hover,
-		.search-results:active{
+		.search-input:focus + .search-results {
 			display: block;
 		}
-		.header-right a {
-			display: inline-block;
-			vertical-align: middle;
-		}
+
 		.btn {
 			display: inline-block;
 			border-radius: 2px;
@@ -116,12 +134,11 @@ body {
 
 .nav-wrapper {
 	{{if .Param "css.gradient"}}
-		background: {{ .Param "css.mainColor" }};
-		background: -moz-linear-gradient(-45deg,  #d84394 0%, #680764 48%, #3c0445 100%);
-		background: -webkit-linear-gradient(-45deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-		background: linear-gradient(135deg,  #d84394 0%,#680764 48%,#3c0445 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84394', endColorstr='#3c0445',GradientType=1 );
-		background: {{ .Param "css.mainColor" }};
+		background: {{ .Param "css.gradient" }};
+		background: -moz-linear-gradient(-45deg,  {{ .Param "css.gradient[0]" }} 0%, {{ .Param "css.gradient[2]" }} 100%);
+		background: -webkit-linear-gradient(-45deg,  {{ .Param "css.gradient[0]" }} 0%, {{ .Param "css.gradient[2]" }} 100%);
+		background: linear-gradient(135deg,  {{ .Param "css.gradient[0]" }} 0%, {{ .Param "css.gradient[2]" }} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{ .Param "css.gradient[0]" }}', endColorstr='{{ .Param "css.gradient[2]" }}',GradientType=1 );
 	{{else}}
 		background: {{ .Param "css.mainColor" }};
 	{{end}}
@@ -132,6 +149,10 @@ body {
 	z-index: 10;
 }
 
+	.nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 	.nav > li {
 		display: inline-block;
 	    list-style: none;
@@ -189,9 +210,6 @@ body {
 					background-color: rgba(0,0,0,0.2);
 				}
 			    
-
-
-	
 .content-wrapper {
 	position: relative;
 	padding: 40px 0 150px;
@@ -343,12 +361,17 @@ ul {
 .content a:visited {
 	color: {{ .Param "css.mainColor" }};
 }
+.content a:hover,
+.content a:focus {
+	text-decoration: none;
+}
 
 blockquote {
 	border-radius: 2px;
-	border:1px solid {{ .Param "css.mainColor" }};
-	color: {{ .Param "css.mainColor" }};
-	padding: 20px;
+	border:1px solid {{ .Param "css.alertColor" }};
+	color: {{ .Param "css.alertColor" }};
+	padding: 10px 20px;
+	margin: 20px;
 }
 	blockquote p {
 		padding: 0;
@@ -369,15 +392,38 @@ table {
 	width: 100%;
 	text-align: center;
 	border: 1px solid #eee;
+	margin: 20px 0;
 }
-	th, td {
-		border: 1px solid #eee;
+	tr {
 	}
+	tr:hover,
+	tr:focus {
+		background-color: #f5f5f5;
+	}
+		th {
+			padding: 2px;
+			font-size: 0.8em;
+			background: #eee;
+			border: 1px solid #DDD;
+		}
+		td {
+			padding: 5px;
+			border: 1px solid #DDD;
+		}
 
 .gitInfos {
-	text-align: right;
-	padding: 10px;
+	margin: 0 auto;
+	padding: 0 0 100px;
+	color: #AAA;
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: center;
 }
+	.gitInfos-text {
+		display: inline-block;
+		border-top: 1px solid #eee;
+		padding-top: 40px;
+	}
 
 .footer {
 	{{if .Param "css.gradient"}}

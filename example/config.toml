@@ -62,8 +62,9 @@ favicons = [
     specialFontName = "font/minspsw"
     bgColor = "#fff"
     mainColor = "#60adea"
+    alertColor = "#F00"
 
     nameColorInverted = false
-    gradient = false
+    gradient = ["#60adea", "#ffadea"]
     
     defaultColor = "#b22f84"
