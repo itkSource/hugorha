@@ -19,16 +19,10 @@
 }
 
 
-
-
-
-
-
-
-
 body {
 	font-family: sans-serif;
     background-color: #fff;
+    color: #222;
 }
 .max-width {
 	width: 90%;
@@ -42,85 +36,111 @@ body {
 	.logo {
 		display: inline-block;
 		vertical-align: middle;
-		height: 60px;
+		max-height: 60px;
 	}
 	.header-sitename {
-		font-family: 'special-font';
+		font-family: 'special-font', sans-serif;
 		display: inline-block;
 		vertical-align: middle;
 		font-size: 3em;
 		text-decoration: none;
 		
-			color: #60adea;
+			color: #468ef4;
 		
 		margin-left: 20px;
 	}
 	.header-right {
 		float: right;
-		color: #888;
+		color: #222;
 		margin-top: 10px;
 		height: 100%;
 		position: relative;
 	}
-		.search-input {
-			padding: 9px;
-			margin: 0 5px;
-			border-radius: 2px;
-			border: 1px solid #ddd;
+		.header-right .fa-search {
+			position: absolute;
+			top: 8px;
+			left: 10px;
 		}
+		.search-input {
+			padding: 9px 9px 9px 40px;
+			width: 170px;
+			margin: 0 5px 0 0;
+			border-radius: 2px;
+			border: 1px solid rgba(150,150,150,0.5);
+			background-color: transparent;
+			color: #222;
+		}
+			.search-input:focus {
+				border-color: #468ef4;
+			}
 		.search-results {
 			display: none;
 			position: absolute;
-			background-color: #fff;
-			margin: 0 24px;
+			margin: 2px 0 0;
 			padding: 0;
+			left: 0;
+			top: 100%;
+			width:219px;
 			z-index: 100;
 			list-style: none;
 			text-decoration: none;
 			border: 1px solid #ddd;
 			border-top: transparent;
-			top: calc(100% - 1px);
+			background-color: #fff;
 		}
 			.search-result {
-				padding: 5px;
+				border-top: 1px solid #eee;
 			}
+			.search-result:hover,
+			.search-result:focus {
+				background-color: rgba(150,150,150,0.1);
+			}
+			.search-result + .search-result {
+			}
+				.search-result a {
+					display: block;
+					padding: 10px;
+				}
 				.search-result a:link,
 				.search-result a:visited {
-					color: #60adea;
+					color: #468ef4;
 					text-decoration: none;
 				}
 				.search-result p {
-					color: #444;
-					padding: 5px 5px 10px;
+					color: #222;
+					font-size: 0.8em;
+					font-style: italic;
+					padding: 5px 5px;
 				}
-		.search-input:focus + .search-results,
 		.search-results:hover,
-		.search-results:active{
+		.search-results:focus,
+		.search-input:focus + .search-results {
 			display: block;
 		}
-		.header-right a {
-			display: inline-block;
-			vertical-align: middle;
-		}
+
 		.btn {
 			display: inline-block;
 			border-radius: 2px;
-			border:1px solid #ddd;
+			border:1px solid rgba(150,150,150,0.5);
 			padding: 10px 15px;
-			color: #888;
+			color: #222;
 			font-size: 0.9em;
 			text-decoration: none;
 		}
 			.btn:hover,
 			.btn:focus {
-				border-color: #60adea;
-				color: #60adea;
+				border-color: #468ef4;
+				color: #468ef4;
 			}
 
 
 .nav-wrapper {
 	
-		background: #60adea;
+		background: #468ef4;
+		background: -moz-linear-gradient(-45deg,  #468ef4 0%, #266ed4 100%);
+		background: -webkit-linear-gradient(-45deg,  #468ef4 0%, #266ed4 100%);
+		background: linear-gradient(135deg,  #468ef4 0%, #266ed4 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#468ef4', endColorstr='#266ed4',GradientType=1 );
 	
 	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset, 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
 	position: sticky;
@@ -129,6 +149,10 @@ body {
 	z-index: 10;
 }
 
+	.nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 	.nav > li {
 		display: inline-block;
 	    list-style: none;
@@ -162,14 +186,16 @@ body {
 			overflow: hidden;
 			left: 0;
 			margin: 0;
-			background-color: #60adea;
+			background-color: #468ef4;
 			display: none;
 		}
 		.nav > li:hover > .subnav {
 	        display: block;
+	        z-index: 1;
 	    }
 			.subnav li {
 			    list-style: none;
+			    text-align: left;
 			}
 
 			    .subnav-link {
@@ -186,9 +212,6 @@ body {
 					background-color: rgba(0,0,0,0.2);
 				}
 			    
-
-
-	
 .content-wrapper {
 	position: relative;
 	padding: 40px 0 150px;
@@ -198,7 +221,7 @@ body {
 		box-sizing: border-box;
 		padding: 0 20px 0 40px;
 		line-height: 1.4em;
-		color: #666;
+		color: #222;
 	}
 	.content-withside {
 		display: inline-block;
@@ -240,7 +263,7 @@ body {
 		}
 			#TableOfContents a {
 				text-decoration: none;
-				color: #444;
+				color: #222;
 				display: block;
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -253,7 +276,7 @@ body {
 
 			/* FIRST LEVEL */
 			#TableOfContents > ul > li > a {
-				color: #60adea;
+				color: #468ef4;
 				padding: 5px 0;
 			}
 			#TableOfContents > ul > li + li {
@@ -274,10 +297,10 @@ body {
 						padding: 0 0 0 5px;
 						margin: 5px 0 10px 5px;
 						font-size: 0.9em;
-						color: #888;
+						color: #222;
 					}
 					#TableOfContents > ul > li > ul > li > ul >li > a {
-						color: #888;
+						color: #222;
 					}
 
 						/* FOURTH LEVEL */
@@ -288,9 +311,9 @@ body {
 
 
 h1 {
-	font-family: 'special-font';
-	color: #60adea;
-	border-bottom: 1px solid #eee;
+	font-family: 'special-font', sans-serif;
+	color: #468ef4;
+	border-bottom: 1px solid rgba(150,150,150,0.2);
 	padding: 10px 0;
 	font-size: 2em;
 	font-weight: normal;
@@ -301,24 +324,24 @@ h1:first-child {
 }
 
 h2 {
-	color: #444;
-	border-bottom: 1px solid #eee;
+	color: #222;
+	border-bottom: 1px solid rgba(150,150,150,0.2);
 	padding: 10px 0;
 	margin: 40px 0 20px -20px;
 	font-size: 1.6em;
 }
 
 h3 {
-	color: #444;
-	border-bottom: 1px solid #eee;
+	color: #222;
+	border-bottom: 1px solid rgba(150,150,150,0.2);
 	padding: 10px 0;
 	margin: 20px 0;
 	font-size: 1.2em;
 }
 
 h4 {
-	color: #444;
-	border-bottom: 1px solid #eee;
+	color: #222;
+	border-bottom: 1px solid rgba(150,150,150,0.2);
 	padding: 10px 0;
 	margin: 20px 0;
 	font-size: 1.1em;
@@ -338,14 +361,19 @@ ul {
 
 .content a:link,
 .content a:visited {
-	color: #60adea;
+	color: #468ef4;
+}
+.content a:hover,
+.content a:focus {
+	text-decoration: none;
 }
 
 blockquote {
 	border-radius: 2px;
-	border:1px solid #60adea;
-	color: #60adea;
-	padding: 20px;
+	border:1px solid red;
+	color: red;
+	padding: 10px 20px;
+	margin: 20px;
 }
 	blockquote p {
 		padding: 0;
@@ -365,35 +393,68 @@ code {
 table {
 	width: 100%;
 	text-align: center;
-	border: 1px solid #eee;
+	margin: 20px 0;
 }
-	th, td {
-		border: 1px solid #eee;
+	tr {
 	}
+	tr:hover,
+	tr:focus {
+		background-color: rgba(150,150,150,0.2);
+	}
+		th {
+			padding: 2px;
+			font-size: 0.8em;
+			background: rgba(150,150,150,0.3);
+			border: 1px solid rgba(150,150,150,0.4);
+		}
+		td {
+			padding: 5px;
+			border: 1px solid rgba(150,150,150,0.4);
+		}
 
 .gitInfos {
-	text-align: right;
-	padding: 10px;
+	margin: 0 auto;
+	padding: 0 0 100px;
+	color: #222;
+	opacity: 0.6;
+	font-size: 0.8em;
+	line-height:1.5em;
+	font-style: italic;
+	text-align: center;
 }
+	.gitInfos-text {
+		display: inline-block;
+		border-top: 1px solid rgba(150,150,150,0.4);
+		padding-top: 40px;
+	}
 
 .footer {
 	
-		background: #60adea;
+		background: #468ef4;
+		background: -moz-linear-gradient(-45deg,  #468ef4 0%, #266ed4 100%);
+		background: -webkit-linear-gradient(-45deg,  #468ef4 0%, #266ed4 100%);
+		background: linear-gradient(135deg,  #468ef4 0%, #266ed4 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#468ef4', endColorstr='#266ed4',GradientType=1 );
 	
-
 	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset;
 
 	color: #fff;
 	text-align: center;
 	padding: 40px 0;
 	font-size: 0.9em;
+	line-height:1.5em;
 }
 
 /* RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
-	.header-sitename {
-		display:none;
+	.header {
+		text-align: center;
+	}
+	.header-right {
+		float: none;
+		display: inline-block;
+		margin: 0 20px;
 	}
 }
 
@@ -401,13 +462,17 @@ table {
     .nav {
         text-align: center;
     }
-	.nav .nav-link  {
+    
+	.nav-span,
+	.nav-link  {
 		padding: 20px 8px;
 	}
 }
 
 @media screen and (max-width: 700px) {
-	.nav .nav-link  {
+	
+	.nav-span,
+	.nav-link  {
 		padding: 10px 8px;
 	}
 	.sidenav {
@@ -416,15 +481,26 @@ table {
 	.content-withside {
 		width: 100%;
 	}
+	.content {
+		padding: 0;
+	}
+	h1, h2, h3, h4 {
+		margin-left:0;
+	}
 }
 
 @media screen and (max-width: 620px) {
-	.header {
+	.logo {
+		max-width: 40px;
+	}
+	.header-sitename {
+		font-size: 2em;
+	}
+	.header-right {
 		display: none;
 	}
-	.nav .nav-link  {
-		font-size: 0.8em;
-		padding: 10px 1px;
+	.nav-span,
+	.nav-link  {
 	}
 }
 	</style>
@@ -474,6 +550,7 @@ table {
 	<title>Hugorha - Licence</title>
 </head>
 <body>
+
 <header class="header">
 	<div class="max-width">
 		<img class="logo" src="https://itksource.github.io/hugorha/images/headerLogo.png">
@@ -780,6 +857,8 @@ END OF TERMS AND CONDITIONS
 	    </div>
     
 </div>
-    <div class="gitInfos">Make with ❤ by Romain Maneschi the August 31, 2017</div>
+    <div class="gitInfos">
+    	<div class="gitInfos-text">This page was written with ❤ by Romain Maneschi the August 31, 2017</div>
+    </div>
     <footer class="footer">Copyright © 2017 Itk. All Rights Reserved.</footer>
 </body>
