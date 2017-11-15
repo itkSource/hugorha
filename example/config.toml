@@ -61,12 +61,13 @@ favicons = [
     [params.css]
     specialFontName = "font/minspsw"
 
-    mainColor = "#468ef4"
-    gradient_1 = "#468ef4"
+    mainColor = "#ccc"
+    gradient_1 = "#266ed4"
     gradient_2 = "#266ed4"
     textColor = "#222"
 
     bgColor = "#fff"
+    headerBg = "#266ed4"
     textColorOnMainColor = "#fff"
 
     alertColor = "red"
