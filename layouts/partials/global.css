@@ -23,7 +23,7 @@ body {
 }
 .header {
 	padding: 20px 0 30px;
-  background: {{ .Param "css.headerBg" }};;
+  background: {{ .Param "css.headerBg" | default "none" }};;
 }
 	.logo {
 		display: inline-block;
