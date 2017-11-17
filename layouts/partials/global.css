@@ -23,6 +23,7 @@ body {
 }
 .header {
 	padding: 20px 0 30px;
+  background: {{ .Param "css.headerBg" | default "none" }};;
 }
 	.logo {
 		display: inline-block;
@@ -138,7 +139,11 @@ body {
 	{{else}}
 		background: {{ .Param "css.mainColor"  | default "#468ef4" }};
 	{{end}}
-	box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset, 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
+  {{ if and (.Param "css.headerBg") }}
+     box-shadow: 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
+  {{else}}
+	   box-shadow: 0px 7px 6px -6px rgba(0,0,0,0.3) inset, 0px -7px 6px -6px rgba(0,0,0,0.3) inset;
+  {{end}}
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
@@ -207,7 +212,7 @@ body {
 				.subnav-link-active {
 					background-color: rgba(0,0,0,0.2);
 				}
-			    
+
 .content-wrapper {
 	position: relative;
 	padding: 40px 0 150px;
@@ -460,7 +465,7 @@ table {
     .nav {
         text-align: center;
     }
-    
+
 	.nav-span,
 	.nav-link  {
 		padding: 20px 8px;
@@ -468,7 +473,7 @@ table {
 }
 
 @media screen and (max-width: 700px) {
-	
+
 	.nav-span,
 	.nav-link  {
 		padding: 10px 8px;
