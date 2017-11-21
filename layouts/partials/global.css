@@ -22,7 +22,7 @@ body {
 	margin-right:auto;
 }
 .header {
-	padding: {{ .Param "css.headerPadding" | default "#FFF" }} 0;
+	padding: {{ .Param "css.headerPadding" | default "20px" }} 0;
 	background: {{ .Param "css.headerBg" | default "#FFF" }};
 }
 	.logo {
@@ -38,7 +38,7 @@ body {
 		text-decoration: none;
 		{{if .Param "css.siteNameBorder"}}
 			color: {{ .Param "css.logoColor" | default "#FFF" }};
-			text-shadow: 0 3px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 3px 0 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 0 -3px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -3px 0 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 2px 2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -2px 2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, 2px -2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }}, -2px -2px 0 {{ .Param "css.mainColor"  | default "#468ef4" }};
+			text-shadow: 0 3px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 3px 0 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 0 -3px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -3px 0 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 2px 2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -2px 2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 2px -2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -2px -2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }};
 		{{else}}
 			color: {{ .Param "css.logoColor"  | default "#468ef4" }};
 		{{end}}

@@ -30,7 +30,7 @@ All your page of first level menu must have `menu: "main"` in there meta.
 
 In your config you must have :
 
-```text
+```bash
 [params]
 # The title of your homepage (to be rendered in /)
 homePageTitle = "Hugorha"
@@ -61,29 +61,42 @@ favicons = [
     # The font files path (placed in /static) and name with the extention. Only need WOFF2 and WOFF format [Default : sans-serif]
     specialFontName = "font/minspsw"
 
-    # the background color [Default : #FFF]
-    bgColor = "#fff"
     # the main color [Default : #60adea]
-    mainColor = "#60adea"
-    # if gradient 1 and 2 are set, the background of menu and footer will be a gradient
-    gradient_1 = "#468ef4"
-    gradient_2 = "#266ed4"
-
-    # The text color [Default : #222]
-    textColor = "#222"
+    mainColor = "#266ed4"
     # The text color on the main color (like the menu) [Default : #FFF]
     textColorOnMainColor = "#fff"
 
-    # If true the Site Name in the header will be only outlined with the main color [Default : false]
+    # if gradient 1 and 2 are set, the background of menu and footer will be a gradient
+    gradient_1 = "#266ed4"
+    gradient_2 = "#266ed4"
+
+    # the color of the logo text [Default : #468ef4]
+    logoColor = "#fff"
+    # If true the Site Name in the header will be only outlined with the color [Default : false]
     siteNameBorder = false
+
+    # the header background color [Default : #FFF]
+    headerBg = "#266ed4"
+    # the header text color [Default : #222]
+    headerTextColor = "#FFF"
+    # the header padding [Default : 20px]
+    headerPadding = "40px"
+
+    # the background color [Default : #FFF]
+    bgColor = "#fff"
+    # The text color [Default : #222]
+    textColor = "#222"
+
+    # Display the menu as fancy tabs [Default : false]
+    menuAsTab = "true"
 
     # Color of the alert block [Default : red]
     alertColor = "red"
 
-    
 ```
 
 > Full configuration can be found in [example/config.toml](https://github.com/itkSource/hugorha/blob/master/example/config.toml)
+
 
 ## Dev on hugorha
 
