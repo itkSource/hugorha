@@ -64,8 +64,8 @@ favicons = [
     mainColor = "#266ed4"
     textColorOnMainColor = "#fff"
 
-    gradient_1 = "#266ed4"
-    gradient_2 = "#266ed4"
+    # gradient_1 = "red"
+    # gradient_2 = "#266ed4"
 
     logoColor = "#fff"
     siteNameBorder = false
