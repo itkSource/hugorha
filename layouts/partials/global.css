@@ -23,7 +23,16 @@ body {
 }
 .header {
 	padding: {{ .Param "css.headerPadding" | default "20px" }} 0;
-	background: {{ .Param "css.headerBg" | default "#FFF" }};
+	
+	{{ if and (.Param "css.gradient_1") (.Param "css.gradient_2") }}
+		background: {{ .Param "css.gradient_1" }};
+		background: -moz-linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		background: -webkit-linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		background: linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{ .Param "css.gradient_1" }}', endColorstr='{{ .Param "css.gradient_2" }}',GradientType=1 );
+	{{else}}
+		background: {{ .Param "css.headerBg" | default "#FFF" }};
+	{{end}}
 }
 	.logo {
 		display: inline-block;
@@ -37,7 +46,7 @@ body {
 		font-size: 3em;
 		text-decoration: none;
 		{{if .Param "css.siteNameBorder"}}
-			color: {{ .Param "css.logoColor" | default "#FFF" }};
+			color: {{ .Param "css.headerBg" | default "#fff" }};
 			text-shadow: 0 3px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 3px 0 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 0 -3px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -3px 0 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 2px 2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -2px 2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, 2px -2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }}, -2px -2px 0 {{ .Param "css.logoColor"  | default "#468ef4" }};
 		{{else}}
 			color: {{ .Param "css.logoColor"  | default "#468ef4" }};
@@ -132,9 +141,9 @@ body {
 .nav-wrapper {
 	{{ if and (.Param "css.gradient_1") (.Param "css.gradient_2") }}
 		background: {{ .Param "css.gradient_1" }};
-		background: -moz-linear-gradient(-45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
-		background: -webkit-linear-gradient(-45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
-		background: linear-gradient(135deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		background: -moz-linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		background: -webkit-linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
+		background: linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{ .Param "css.gradient_1" }}', endColorstr='{{ .Param "css.gradient_2" }}',GradientType=1 );
 	{{else}}
 		background: {{ .Param "css.mainColor"  | default "#468ef4" }};
@@ -173,7 +182,6 @@ body {
 			padding: 15px 30px;
 			font-weight: bold;
 	        position: relative;
-			margin: 2px 0 0;
 			transition: margin 100ms, padding 100ms;
 			overflow: hidden;
 			white-space: nowrap;
@@ -181,71 +189,26 @@ body {
 		.nav-link {
 			cursor: pointer;
 		}
-		{{ if and (.Param "css.menuAsTab") }}
 
+		.nav-span:hover ,
+		.nav-span:focus,
+		.nav-link:hover,
+		.nav-link:focus  {
+			background-color: rgba(0,0,0,0.2);
+		}
+		.nav-link-active {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+		{{ if and (.Param "css.menuAsTab") }}
 			.nav-link,
 			.nav-span {
-				padding: 20px 30px 15px;
-			}
-			.nav > li > .nav-span::before,
-			.nav > li > .nav-link::before {
-				content:"";
-				z-index: -1;
-				position: absolute;
-				left: 5px;
-				top: 5px;
-				height: 120%;
-				width: calc(100% - 10px);
-				background: {{ .Param "css.mainColor"  | default "#468ef4" }};
-				box-shadow: 0 0 0 100px rgba(0,0,0,0.1) inset;
 				border-radius: 5px 5px 0 0;
-				transform-origin: center;
-				transform: rotate(3deg);
+				margin: 0 5px 0 0;
 			}
-			.nav > li > .nav-span::after,
-			.nav > li > .nav-link::after {
-				content:"";
-				z-index: -1;
-				position: absolute;
-				left: 5px;
-				top: 5px;
-				height: 120%;
-				width: calc(100% - 10px);
-				background: {{ .Param "css.mainColor"  | default "#468ef4" }};
-				box-shadow: 0 0 0 100px rgba(0,0,0,0.1) inset;
-				border-radius: 0 5px 0 0;
-				transform-origin: center;
-				transform: rotate(-3deg) translate(2px, 7px);
-			}
-
-			.nav-link-active {
+			.nav-link.nav-link-active {
+				background-color: {{ .Param "css.bgColor"  | default "#FFF" }};
 				color: {{ .Param "css.mainColor"  | default "#468ef4" }};
-			}
-			.nav > li > .nav-link-active::before {
-				background: #fff;
-				box-shadow: none;
-			}
-			.nav > li > .nav-link-active::after {
-				background: #fff;
-				box-shadow: none;
-			}
-			.nav li:hover .nav-span,
-			.nav li:focus .nav-span,
-			.nav li:hover .nav-link,
-			.nav li:focus .nav-link {
-				margin: 0;
-				padding-bottom: 17px;
-			}
-		{{else}}
-		
-			.nav li:hover .nav-span,
-			.nav li:focus .nav-span,
-			.nav li:hover .nav-link,
-			.nav li:focus .nav-link {
-				background-color: rgba(0,0,0,0.2);
-			}
-			.nav-link-active {
-				background-color: rgba(0,0,0,0.2);
 			}
 		{{end}}
 
@@ -271,7 +234,7 @@ body {
 			    .subnav-link {
 			    	display: block;
 			        cursor: pointer;
-			        padding: 15px;
+			        padding: 20px 15px;
 			        color: {{ .Param "css.textColorOnMainColor" | default "#FFF" }};
 			        text-decoration: none;
 			        font-size: 0.9em;
@@ -546,50 +509,26 @@ table {
 	.nav li {
 		flex: 1 1 100%;
 	}
-
-	.nav-span::before,
-	.nav-link::before,
-	.nav-span::after,
-	.nav-link::after {
-		display: none;
-	}
 	
 	.nav-span,
 	.nav-link {
 		padding: 10px;
 		margin: 0;
 		display: block;
+		border-radius: 5px;
 	}
-	.nav li:hover .nav-span,
-	.nav li:focus .nav-span,
-	.nav li:hover .nav-link,
-	.nav li:focus .nav-link {
-		margin: 0;
-		padding: 10px;
+	.nav-link.nav-link-active {
 	}
 
-	.nav li:hover .nav-span,
-	.nav li:focus .nav-span,
-	.nav li:hover .nav-link,
-	.nav li:focus .nav-link {
-		background-color: rgba(0,0,0,0.2);
-	}
-	.nav-link-active {
-		background-color: rgba(0,0,0,0.2);
-		color: #fff;
-	}
+		.subnav {
+			display: block;
+			position: relative;
+			top:0;
+		}
 
-	.subnav {
-		display: block;
-		position: relative;
-		top:0;
-	}
-
-	.subnav li {
-		text-align: center;
-	}
-
-
+			.subnav li {
+				text-align: center;
+			}
 
 	.sidenav {
 		display: none;
