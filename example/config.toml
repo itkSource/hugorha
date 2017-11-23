@@ -3,7 +3,8 @@ themesdir = "../.."
 baseurl = "http://localhost:1313/"
 publishDir = "../docs"
 title = "Hugorha"
-PygmentsCodeFences = true
+pygmentsUseClasses=true
+pygmentsCodeFences=true
 relativeURLs = true
 enableGitInfo = true
 
@@ -69,7 +70,7 @@ favicons = [
 
     logoColor = "#fff"
     siteNameBorder = false
-    
+
     headerBg = "#266ed4"
     headerTextColor = "#FFF"
     headerPadding = "40px"

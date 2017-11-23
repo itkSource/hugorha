@@ -15,6 +15,9 @@
 	<style type="text/css">
 		{{ partial "style.css" . | safeCSS }}
 	</style>
+	<style type="text/css">
+		{{ partial "syntax.css" . | safeCSS }}
+	</style>
 	<script src="{{ `js/js-search.1.4.2.js` | absURL }}"></script>
 	{{ range .Site.Params.favicons }}
 	{{ safeHTML . }}
