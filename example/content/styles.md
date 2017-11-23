@@ -1,6 +1,6 @@
 ---
 title: "Styles"
-menu: 
+menu:
     main:
         weight: 2
         pre: '<i class="fa fa-text-height" aria-hidden="true"></i>'
@@ -105,3 +105,22 @@ const a = {}
 |line|  ✔ |  ✘ |
 |line|  ✔ |  ✘ |
 |line|  ✔ |  ✘ |
+
+## Syntax Highlighting
+
+From hugo 0.28, default [syntax hightlighter](https://gohugo.io/content-management/syntax-highlighting/) is [Chroma](https://github.com/alecthomas/chroma)
+
+To configure Chrome, add first the following options in `config.toml` file.
+
+```bash
+pygmentsUseClasses=true
+pygmentsCodeFences=true
+```
+
+To override syntax highlighter CSS, you can generate directly with Hugo:
+
+```bash
+hugo gen chromastyles --style=monokai > layouts/partials/syntax.css
+```
+
+See https://help.farbox.com/pygments.html for a gallery of available styles.

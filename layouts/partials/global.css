@@ -1,4 +1,4 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 
 @font-face {
@@ -23,7 +23,7 @@ body {
 }
 .header {
 	padding: {{ .Param "css.headerPadding" | default "20px" }} 0;
-	
+
 	{{ if and (.Param "css.gradient_1") (.Param "css.gradient_2") }}
 		background: {{ .Param "css.gradient_1" }};
 		background: -moz-linear-gradient(45deg,  {{ .Param "css.gradient_1" }} 0%, {{ .Param "css.gradient_2" }} 100%);
@@ -266,12 +266,7 @@ body {
 			border: 1px solid #ccc;
 			border-radius: 2px;
 		}
-		.content-withside .highlight, .content .highlight {
-			overflow: auto;
-			color: #fefefe;
-			padding: 6px;
-			border-radius: 2px;
-		}
+
 	.sidenav {
 		vertical-align: top;
 		display: inline-block;
@@ -415,14 +410,6 @@ blockquote {
 		padding-top: 10px;
 	}
 
-code {
-	background-color: #444;
-	padding: 1px 5px;
-	font-size: 0.9em;
-	color: #fefefe;
-	font-family: "Courier New";
-}
-
 table {
 	width: 100%;
 	text-align: center;
@@ -444,6 +431,10 @@ table {
 			padding: 5px;
 			border: 1px solid rgba(150,150,150,0.4);
 		}
+
+.chroma {
+  padding: 5px;
+}
 
 .gitInfos {
 	margin: 0 auto;
@@ -505,11 +496,11 @@ table {
 	.nav-wrapper {
 		position: relative;
 	}
-	
+
 	.nav li {
 		flex: 1 1 100%;
 	}
-	
+
 	.nav-span,
 	.nav-link {
 		padding: 10px;
