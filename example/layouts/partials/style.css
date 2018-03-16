@@ -1,1 +1,20 @@
 /* override css here */
+
+.card.card-hugorha {
+	order: 1;
+}
+.card.card-lorhammer {
+	order: 3;
+	background: -webkit-linear-gradient(top left, #680764, #530650);
+    background: linear-gradient(to bottom right, #680764, #530650);
+}
+.card.card-continuous {
+	flex: 1 0 auto;
+	order: 2;
+	background: -webkit-linear-gradient(top left, #358E79, #2A7261);
+    background: linear-gradient(to bottom right, #358E79, #2A7261);
+}
+.card.card-continuous .card-icon {
+	border-radius: 25px;
+	width: 150px;
+}
