@@ -1,0 +1,37 @@
+
+{{$tags := split (.Get "tags") ","}}
+
+<div class="cards">
+
+{{range $page := .Site.RegularPages}}
+
+	{{ if gt ( len (intersect $page.Params.tags $tags)) 0 }}
+
+			{{$.Scratch.Set "link" $page.Permalink}}
+			{{ if $page.Params.redirect }}
+				{{$.Scratch.Set "link" $page.Params.redirect}}
+			{{ end }}
+
+	
+		    <a href='{{$.Scratch.Get "link"}}' class="card {{range $page.Params.tags}} card-{{.}}{{end}}">
+		    
+				    {{ if $page.Params.card.icon }}
+						<img class="card-icon" src='{{ $page.Params.card.icon }}'/>
+						<span class='card-title small'>{{ $page.Title }}</span>
+				    {{ else }}
+      				<div class='card-title'>{{ $page.Title }}</div>
+      				{{ end }}
+      				<hr>
+      				<div class='card-content'>
+      					{{ $page.Description }}
+      				</div>
+      				<div class='card-footer'>
+      					{{ $page.Lastmod.Format "January 2, 2006" }}
+      				</div>	
+			</a>
+
+	{{ end }}
+
+{{end}}
+
+</div>
