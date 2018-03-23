@@ -4,6 +4,7 @@ type: "slide"
 theme: "moon"
 menu:
     main:
+        parent: "slides"
         weight: 3
         pre: '<i class="fa fa-slideshare" aria-hidden="true"></i>'
 revealOptions:
@@ -13,6 +14,9 @@ revealOptions:
   history: true
   center: false
   showNotes: true
+description: Example of slide inside hugorha template
+tags:
+  - slide
 
 ---
 # Slide Demo
