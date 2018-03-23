@@ -1,6 +1,8 @@
 
 {{$tags := split (.Get "tags") ","}}
 
+<a class="hiddenFilter" href="#">Cancel filter</a>
+
 <div class="cards">
 
 {{range $page := .Site.RegularPages}}
@@ -12,8 +14,7 @@
 				{{$.Scratch.Set "link" $page.Params.redirect}}
 			{{ end }}
 
-	
-		    <a href='{{$.Scratch.Get "link"}}' class="card {{range $page.Params.tags}} card-{{.}}{{end}}">
+		    <div href='{{$.Scratch.Get "link"}}' class="card {{range $page.Params.tags}} card-{{.}}{{end}}">
 		    
 				    {{ if $page.Params.card.icon }}
 						<img class="card-icon" src='{{ $page.Params.card.icon }}'/>
@@ -23,12 +24,15 @@
       				{{ end }}
       				<hr>
       				<div class='card-content'>
-      					{{ $page.Description }}
+						  {{ $page.Description }}
       				</div>
-      				<div class='card-footer'>
-      					{{ $page.Lastmod.Format "January 2, 2006" }}
-      				</div>	
-			</a>
+      				
+					<ul class="card-tags">{{range $page.Params.tags}}<li class="card-tag card-tag-{{.}}"><a href="#{{.}}">{{.}}</a></li>{{end}}</ul>
+
+					<div class='card-footer'>
+						{{ $page.Lastmod.Format "January 2, 2006" }}
+				  	</div>
+			</div>
 
 	{{ end }}
 

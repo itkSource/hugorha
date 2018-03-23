@@ -22,6 +22,7 @@
 		{{ partial "syntax.css" . | safeCSS }}
 	</style>
 	<script src="{{ `js/js-search.1.4.2.js` | absURL }}"></script>
+	<script src="{{ `js/cardFilter.js` | absURL }}"></script>
 	{{ range .Site.Params.favicons }}
 	{{ safeHTML . }}
 	{{ end }}
