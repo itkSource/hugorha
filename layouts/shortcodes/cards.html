@@ -14,24 +14,25 @@
 				{{$.Scratch.Set "link" $page.Params.redirect}}
 			{{ end }}
 
-		    <div href='{{$.Scratch.Get "link"}}' class="card {{range $page.Params.tags}} card-{{.}}{{end}}">
-		    
-				    {{ if $page.Params.card.icon }}
+		    <div class="card {{range $page.Params.tags}} card-{{.}}{{end}}">
+				<a class="card-link" href='{{$.Scratch.Get "link"}}'>
+					{{ if $page.Params.card.icon }}
 						<img class="card-icon" src='{{ $page.Params.card.icon }}'/>
 						<span class='card-title small'>{{ $page.Title }}</span>
-				    {{ else }}
-      				<div class='card-title'>{{ $page.Title }}</div>
-      				{{ end }}
-      				<hr>
-      				<div class='card-content'>
-						  {{ $page.Description }}
-      				</div>
-      				
-					<ul class="card-tags">{{range $page.Params.tags}}<li class="card-tag card-tag-{{.}}"><a href="#{{.}}">{{.}}</a></li>{{end}}</ul>
+					{{ else }}
+					<div class='card-title'>{{ $page.Title }}</div>
+					{{ end }}
+					<hr>
+					<div class='card-content'>
+						{{ $page.Description }}
+					</div>
+				</a>
+				
+				<ul class="card-tags">{{range $page.Params.tags}}<li class="card-tag card-tag-{{.}}"><a href="#{{.}}">{{.}}</a></li>{{end}}</ul>
 
-					<div class='card-footer'>
-						{{ $page.Lastmod.Format "January 2, 2006" }}
-				  	</div>
+				<div class='card-footer'>
+					{{ $page.Lastmod.Format "January 2, 2006" }}
+				</div>
 			</div>
 
 	{{ end }}
