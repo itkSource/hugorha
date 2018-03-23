@@ -91,15 +91,3 @@
         padding: 2px;
         border-radius: 2px;
     }
-    .card-tags .card-tag-demo {
-        background-color: yellow;
-        color: #000;
-    }
-    .card-tags .card-tag-continuous {
-        background-color: red;
-        color: #000;
-    }
-    .card-tags .card-tag-lorhammer {
-        background-color: green;
-        color: #000;
-    }
