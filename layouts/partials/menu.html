@@ -10,8 +10,12 @@
 					{{.Pre}} {{ .Name }}
 				</a>
 			{{else if .HasChildren}}
-				<span class="nav-span">{{.Pre}} {{ .Name }}</span>
-				<ul href="{{ .URL | absURL }}" class="subnav {{if $currentPage.HasMenuCurrent "main" . }}subnav-active{{end}}">
+				{{ if .URL }}
+					<a href="{{ .URL | absURL }}" class="nav-span {{ if eq $currentPage.URL .URL }}nav-link-active{{ end }}">{{.Pre}} {{ .Name }}</a>
+				{{else}}
+					<span href="{{ .URL | absURL }}" class="nav-span {{ if eq $currentPage.URL .URL }}nav-link-active{{ end }}">{{.Pre}} {{ .Name }}</span>
+				{{end}}
+				<ul class="subnav {{if $currentPage.HasMenuCurrent "main" . }}subnav-active{{end}}">
 					{{ range .Children }}
 						<li>
 							<a class="subnav-link" href="{{.URL | absURL }}">{{ .Name }}</a>
